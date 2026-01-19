@@ -215,7 +215,7 @@ backgroundPosition: bottom+10px left+10px
 
 ---
 
-# Brief history of the finite element method (FEM)
+# Brief history of the finite element method
 
 <!-- ![bg width:700px opacity:.2](./Simula_logo.png) -->
 
@@ -223,6 +223,7 @@ backgroundPosition: bottom+10px left+10px
 <div>
 
 - **1910s**: Rayleigh-Ritz/Ritz-Galerkin method
+
 - **1940s**: Birth of the FEM
 - **1958**: First open source FE software
 - **1970s**: General purpose FE software and mathematical rigorousness
@@ -264,6 +265,34 @@ $$
 
 ---
 
+# List of existing commericial and open-source FEM software
+
+---
+
+# How does FEniCS fit into this landscape?
+
+---
+
+<!--  footer:  <br><br> -->
+
+# Does companies use FEnICS at the moment?
+
+- Rafinex (Jack), closed source GUI https://www.youtube.com/watch?v=INtwTI8HFRM
+- Proxima (Jack)
+- Rolls Royce (probably enough in published papers)
+- Turbostream CFD (Jørgen)
+- Firon APS (Jørgen)
+- Feather https://www.youtube.com/watch?v=6UMVoGTb1jk
+- Undabit (open source GUI)
+- FeaTool: https://www.featool.com/
+
+---
+
+- Explain difference between FEniCS terminology and the commercial terminology
+
+- Scalability - Performance tests
+- Control
+
 ---
 
 # Brief history of FEniCS
@@ -287,6 +316,7 @@ $$
 
 ~3800 users on the FEniCS Discourse forum
 ~12 000 monthly downloads
+License: LGPL 3
 
 </div>
 
@@ -327,17 +357,36 @@ Garth N. Wells (University of Cambridge)
 <br><img src="fenics_logo.png" width=200px>
 </center>
 
+## <!--  footer: $^1$ Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
+
 ---
 
-<!--  footer: $^1$ Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
+<!--  footer: <br> -->
+
+Options for UMAT-like functionality
+
+https://bleyerj.github.io/comet-fenicsx/
+https://github.com/BAMresearch/fenics-constitutive
+
+Potentially interesting thesis to replicate ansys
+https://wrap.warwick.ac.uk/id/eprint/191715/1/WRAP_Theses_Curtis_2024.pdf
+
+Rolls Royce example:
+https://www.sciencedirect.com/science/article/pii/S0168874X22000312
+
+---
+
+---
+
+# backup slides for now
+
+---
 
 # How does it work?
 
 ### Package overview${^1}$
 
 ![bg contain right:53%](./overview.png)
-
----
 
 <!--  footer: <br> -->
 
