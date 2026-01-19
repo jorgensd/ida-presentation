@@ -173,6 +173,38 @@ backgroundPosition: bottom+10px left+10px
 
 ---
 
+# About me
+
+<div data-marpit-fragment>
+
+- **2014**: First introduction to FEniCS
+
+</div>
+<div data-marpit-fragment>
+
+- **2016-2019:** PhD in informatics from University of Oslo/Simula Research Laboratory (SRL)
+
+</div>
+
+<div data-marpit-fragment>
+
+- **2019-**: Forum Administrator for FEniCS
+- **2019-2022**: Post-doc at Department of Engineering, University of Cambridge
+
+</div>
+
+<div data-marpit-fragment>
+
+- **2022-**: Member of the FEniCS Steering Council
+- **2022-2023**: Research Engineer at SRL
+- **2024--**: Senior Research Engineer at SRL
+
+</div>
+
+![bg right:30%](./me.jpg)
+
+---
+
 # Open source tools
 
 - What does open source mean?
@@ -183,7 +215,54 @@ backgroundPosition: bottom+10px left+10px
 
 ---
 
-# Brief history of FEM and open source
+# Brief history of the finite element method (FEM)
+
+<!-- ![bg width:700px opacity:.2](./Simula_logo.png) -->
+
+<div class="skewed-columns">
+<div>
+
+- **1910s**: Rayleigh-Ritz/Ritz-Galerkin method
+- **1940s**: Birth of the FEM
+- **1958**: First open source FE software
+- **1970s**: General purpose FE software and mathematical rigorousness
+- **1990s**: Object oriented programming
+- **2000s**: User-friendliness (Python)
+- **2010s**: High performance computing
+
+</div>
+
+<div>
+
+Find $u\in V_0$ such that
+
+$$
+R(x) = - \nabla \cdot (\nabla u) - f = 0  \text{ in } \Omega \\
+$$
+
+Define
+
+$$
+u_h = \sum_{i=1}^{N} u_i \phi_i(x)
+$$
+
+and an inner product
+
+$$
+\langle \cdot , \cdot \rangle: V_0 \times V_0 \rightarrow \mathbb{R}
+$$
+
+such that
+
+$$
+\langle R(x), \phi_i \rangle = 0 \qquad\forall i=1,\cdots,N
+$$
+
+</div>
+
+</div>
+
+---
 
 ---
 
