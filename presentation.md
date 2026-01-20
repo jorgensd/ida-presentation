@@ -282,7 +282,7 @@ backgroundPosition: bottom+10px left+10px
 
 </div>
 
-<!--  footer:  <sup>2</sup> lewing@isc.tamu.edu Larry Ewing and The GIMP, Attribution, https://commons.wikimedia.org/w/index.php?curid=80930 <br> <sup>3</sup> Licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> <br><sup>4</sup>Unaltered logo from <a href="https://www.python.org/community/logos/">https://www.python.org/community/logos/</a>
+<!--  footer:  <sup>2</sup> lewing@isc.tamu.edu Larry Ewing and The GIMP, Attribution, https://commons.wikimedia.org/w/index.php?curid=80930 <br> <sup>3</sup> Licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> <br><sup>4</sup> Unaltered logo from <a href="https://www.python.org/community/logos/">https://www.python.org/community/logos/</a>
 
 -->
 
