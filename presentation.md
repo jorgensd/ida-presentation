@@ -256,7 +256,7 @@ backgroundPosition: bottom+10px left+10px
 
 <div style="display: flex; gap: 20px; align-items: flex-end;">
   
-  <figure data-marpit-fragment style="margin: 0; display: flex; flex-direction: column; align-items: center; width: 250px;">
+  <figure data-marpit-fragment style="margin: 0; display: flex; flex-direction: column; align-items: center; width: 333px;">
     GPLv2
     <img src="Tux.png" width="200">
     <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
@@ -264,7 +264,7 @@ backgroundPosition: bottom+10px left+10px
     </figcaption>
   </figure>
 
-  <figure data-marpit-fragment style="margin: 0; display: flex; flex-direction: column; align-items: center; width: 250px;">
+  <figure data-marpit-fragment style="margin: 0; display: flex; flex-direction: column; align-items: center; width: 333px;">
     GPLv2
     <img src="git.png" width="200">
     <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
