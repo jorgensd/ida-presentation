@@ -252,6 +252,20 @@ backgroundPosition: bottom+10px left+10px
 
 ---
 
+<!--  footer: <sup>2</sup>By David A. Wheeler, et al. - The Free-Libre / Open Source Software (FLOSS) License Slide by Dwheeler (2007-09-27)About MPL 2.0: Revision Process and Changes FAQ — Mozilla, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=93181991
+ -->
+
+# What kind of open-source licenses exist?
+
+<figure style="text-align: center;">
+  <img src="Floss-license-slide-image.svg" width="1300" style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+    Figure by  David A. Wheeler et al.<sup>2</sup>
+  </figcaption>
+</figure>
+
+---
+
 # What kind of tools exist that is open-source?
 
 <div style="display: flex; gap: 20px; align-items: flex-end;">
@@ -260,7 +274,7 @@ backgroundPosition: bottom+10px left+10px
     GPLv2
     <img src="Tux.png" width="200">
     <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
-      logo by Larry Ewing<sup>2</sup>
+      logo by Larry Ewing<sup>3</sup>
     </figcaption>
   </figure>
 
@@ -268,35 +282,71 @@ backgroundPosition: bottom+10px left+10px
     GPLv2
     <img src="git.png" width="200">
     <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
-      logo by Jason Long<sup>3</sup>
+      logo by Jason Long<sup>4</sup>
     </figcaption>
   </figure>
 
-  <figure data-marpit-fragment style="margin: 0; display: flex; flex-direction: column; align-items: center; width: 350px;">
-    GPL-compatible*
+  <figure data-marpit-fragment style="margin: 0; display: flex; flex-direction: column; align-items: center; width: 500px;">
+    PSFL (GPL-compatible*)
     <img src="Python-logo.png" width="340">
     <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
-      From <sup>4</sup>
+      logo from <sup>5</sup>
     </figcaption>
   </figure>
 
 </div>
 
-<!--  footer:  <sup>2</sup> lewing@isc.tamu.edu Larry Ewing and The GIMP, Attribution, https://commons.wikimedia.org/w/index.php?curid=80930 <br> <sup>3</sup> Licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> <br><sup>4</sup> Unaltered logo from <a href="https://www.python.org/community/logos/">https://www.python.org/community/logos/</a>
+<!--  footer:  <sup>3</sup> lewing@isc.tamu.edu Larry Ewing and The GIMP, Attribution, https://commons.wikimedia.org/w/index.php?curid=80930 <br> <sup>4</sup> Licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> <br><sup>5</sup> Unaltered logo from <a href="https://www.python.org/community/logos/">https://www.python.org/community/logos/</a> -->
 
--->
+---
+
+<!--  footer: <br><br> -->
+
+# Open-source software
+
+<columns class="columns">
+
+<div>
+
+### ML/LLMs tools
+
+- Tensorflow (Apache 2.0)
+- PyTorch (Modified BSD)
+- Scikit-learn (BSD-3-Clause)
+- LLama (Llama Community License Agreement)
+- DeepSeek (MIT)
+
+</div>
+<div data-marpit-fragment>
+
+### Finite element frameworks
+
+- FEniCS (GPL 3.0/LGPL 3.0)
+- Elmer (GPL 2.0)
+- FreeFem (LGPL 3.0)
+- Code_Aster (GPL 3.0)
+- deal.ii (LGPL 2.1 or later)
+- MOOSE (LGPL 2.1)
+- MFEM (BSD 3-Clause License)
+
+</div>
+<columns>
 
 ---
 
 <!--  footer:  <br><br> -->
 
-# Open source tools
+# Benefits of open-source
 
-- What does open source mean?
-- What kinds of open source exists
-  - Licensing
-- What kind of tools exist
-  - Include AI etc.
+- It's free!
+- It's transparent
+
+---
+
+# Potential issues with open-source
+
+- User-support
+- Long-term viability
 
 ---
 
