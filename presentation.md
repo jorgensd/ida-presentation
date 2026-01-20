@@ -252,6 +252,42 @@ backgroundPosition: bottom+10px left+10px
 
 ---
 
+# What kind of tools exist that is open-source?
+
+<div style="display: flex; gap: 20px; align-items: flex-end;">
+  
+  <figure data-marpit-fragment style="margin: 0; display: flex; flex-direction: column; align-items: center; width: 250px;">
+    GPLv2
+    <img src="Tux.png" width="200">
+    <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
+      logo by Larry Ewing<sup>2</sup>
+    </figcaption>
+  </figure>
+
+  <figure data-marpit-fragment style="margin: 0; display: flex; flex-direction: column; align-items: center; width: 250px;">
+    GPLv2
+    <img src="git.png" width="200">
+    <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
+      logo by Jason Long<sup>3</sup>
+    </figcaption>
+  </figure>
+
+  <figure data-marpit-fragment style="margin: 0; display: flex; flex-direction: column; align-items: center; width: 350px;">
+    GPL-compatible*
+    <img src="Python-logo.png" width="340">
+    <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
+      From <sup>4</sup>
+    </figcaption>
+  </figure>
+
+</div>
+
+<!--  footer:  <sup>2</sup> lewing@isc.tamu.edu Larry Ewing and The GIMP, Attribution, https://commons.wikimedia.org/w/index.php?curid=80930 <br> <sup>3</sup> Licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> <br><sup>4</sup>Unaltered logo from <a href="https://www.python.org/community/logos/">https://www.python.org/community/logos/</a>
+
+-->
+
+---
+
 <!--  footer:  <br><br> -->
 
 # Open source tools
