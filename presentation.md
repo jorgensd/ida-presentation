@@ -302,13 +302,11 @@ backgroundPosition: bottom+10px left+10px
 
 <!--  footer: <br><br> -->
 
-# Open-source software
+# Open-source software in ML
 
-<columns class="columns">
+<!-- <columns class="columns"> -->
 
 <div>
-
-### ML/LLMs tools
 
 - Tensorflow (Apache 2.0)
 - PyTorch (Modified BSD)
@@ -317,19 +315,8 @@ backgroundPosition: bottom+10px left+10px
 - DeepSeek (MIT)
 
 </div>
-<div data-marpit-fragment>
+<!-- <div data-marpit-fragment> -->
 
-### Finite element frameworks
-
-- FEniCS (GPL 3.0/LGPL 3.0)
-- Elmer (GPL 2.0)
-- FreeFem (LGPL 3.0)
-- Code_Aster (GPL 3.0)
-- deal.ii (LGPL 2.1 or later)
-- MOOSE (LGPL 2.1)
-- MFEM (BSD 3-Clause License)
-
-</div>
 <columns>
 
 ---
@@ -400,7 +387,37 @@ $$
 
 ---
 
-# List of existing commericial and open-source FEM software
+# Finite element frameworks
+
+<columns class="columns">
+
+<div>
+
+### Open-source
+
+- FEniCS (GPL 3.0/LGPL 3.0)
+- Elmer (GPL 2.0)
+- FreeFem (LGPL 3.0)
+- Code_Aster (GPL 3.0)
+- deal.ii (LGPL 2.1 or later)
+- MOOSE (LGPL 2.1)
+- MFEM (BSD 3-Clause License)
+- ...
+</div>
+
+<div>
+
+### Proprietary
+
+- MSC Nastran (1971--)
+- ANSYS (1970--)
+- LS-DYNA (1976--2019)
+- ABAQUS (1978--)
+- COMSOL (1986--)
+- ...
+
+</div>
+</div>
 
 ---
 
