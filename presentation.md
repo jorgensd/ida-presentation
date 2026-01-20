@@ -205,6 +205,55 @@ backgroundPosition: bottom+10px left+10px
 
 ---
 
+# What does open-source mean?
+
+<div data-marpit-fragment>
+<div>
+
+### <s>One can look at the source code</s>
+
+</div>
+</div>
+
+---
+
+# Requirements of open-source$^{1}$
+
+<!--  footer: <sup>1</sup>https://opensource.org/definition-annotated -->
+
+<div data-marpit-fragment>
+<div>
+
+- **Free Redistribution**: Anyone should be able to redistribute the code, without having to pay a royalty or licence fee
+
+</div>
+</div>
+<div data-marpit-fragment>
+<div>
+
+- **Source code availability**: Program must include source code and allow redistribution of source code.
+- **Derived works**: Must allow for modifications or derived works that can be published under the same license.
+
+</div>
+</div>
+<div data-marpit-fragment>
+
+- **Integrity of authors code**: Publishing derived works can be restricted **if and only if** the software allows for patch files that can be used at build time.
+- **No discrimination against persons, groups or fields of endeavour**
+
+</div>
+</div>
+<div data-marpit-fragment>
+
+- **Cannot force license requirements on software bundled alongside** (independent code)
+
+</div>
+</div>
+
+---
+
+<!--  footer:  <br><br> -->
+
 # Open source tools
 
 - What does open source mean?
@@ -316,7 +365,7 @@ $$
 
 ~3800 users on the FEniCS Discourse forum
 ~12 000 monthly downloads
-License: LGPL 3
+License: LGPL 3 or later
 
 </div>
 
