@@ -498,6 +498,7 @@ $$
 - LS-DYNA (1976--2019)
 - ABAQUS (1978--)
 - COMSOL (1986--)
+- FEATool multiphysics [FEniCS backend] (2013--)
 - ...
 
 </div>
@@ -634,7 +635,7 @@ identical core counts".</i><sup>7</sup>
 - Turbostream CFD (Jørgen)
 - Feather https://feather.solutions/ (I've asked feather for a quote)
 - Undabit (I've asked Antonio for a quote)
-- FeaTool: https://www.featool.com/
+- FeaTool: https://www.featool.com/ (b)
 
 ---
 
