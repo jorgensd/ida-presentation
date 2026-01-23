@@ -433,6 +433,42 @@ $$
 
 ---
 
+# Brief history of the finite element method
+
+<!-- ![bg width:700px opacity:.2](./Simula_logo.png) -->
+
+<!-- <div data-marpit-fragment="1"> -->
+
+- **1970s**: General purpose FE software and mathematical rigorousness
+
+<!-- </div> -->
+<div data-marpit-fragment="2">
+
+- **1990s**: Object oriented programming
+
+</div>
+<div data-marpit-fragment="3">
+
+- **2000s**: User-friendliness (Python)
+
+</div>
+
+<div data-marpit-fragment="4">
+
+- **2010s**: High performance computing and hybrid architectures (GPU)
+
+</div>
+<div data-marpit-fragment="5">
+
+- **2025**: Market value 6.91 billion USD <sup>5</sup>
+- **2026**: Forcast market value 25.39 billion USD <sup>5</sup>
+
+</div>
+
+<!--  footer: <sup>5</sup> Research Nester. Finite Element Analysis (FEA) Software Market Outlook. 2026. url: https://www.researchnester.com/reports/finite-element-analysis-software-market/4188. -->
+
+---
+
 <!--  footer: <br><br> -->
 
 # Finite element frameworks
@@ -443,7 +479,6 @@ $$
 
 ### Open-source
 
--
 - FEniCS (GPL 3.0/LGPL 3.0)
 - Elmer (GPL 2.0)
 - FreeFem (LGPL 3.0)
@@ -471,28 +506,6 @@ $$
 ---
 
 # How does FEniCS fit into this landscape?
-
----
-
-<!--  footer:  <br><br> -->
-
-# Does companies use FEnICS at the moment?
-
-- Rafinex (Jack), closed source GUI https://www.youtube.com/watch?v=INtwTI8HFRM
-- Proxima (Jack)
-- Rolls Royce (probably enough in published papers)
-- Turbostream CFD (Jørgen)
-- Firon APS (Jørgen)
-- Feather https://www.youtube.com/watch?v=6UMVoGTb1jk
-- Undabit (open source GUI)
-- FeaTool: https://www.featool.com/
-
----
-
-- Explain difference between FEniCS terminology and the commercial terminology
-
-- Scalability - Performance tests
-- Control
 
 ---
 
@@ -559,6 +572,76 @@ Garth N. Wells (University of Cambridge)
 </center>
 
 ## <!--  footer: $^1$ Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
+
+---
+
+# FEniCS is used in a variety of SMEs
+
+<figure style="text-align: center;">
+  <img src="firon.png" width="1000" style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+    Firon ApS is a Danish startup that uses FEniCS to predict CNC milling vibrations (see: <a href=https://firon.dk>https://firon.dk/</a>)
+  </figcaption>
+</figure>
+
+<!--  footer:  <br><br> -->
+
+---
+
+# FEniCS is used in a variety of SMEs
+
+<figure style="text-align: center;">
+  <img src="proxima.png" width="800" style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+    Proxima Fusion uses FEniCS to simulate heat transfer in the walls of a stellarators <br>(see: <a href=https://www.proximafusion.com>https://www.proximafusion.com//</a>)<br>
+    Image from Massimiliano Leoni (Proxima Fusion)
+  </figcaption>
+</figure>
+
+---
+
+# FEniCS is also used by Rolls Royce <sup>6</sup>
+
+<div class=skewed-columns>
+<div>
+<figure style="text-align: center;">
+  <img src="rolls_royce_PMSM.png" width="600" style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+    Permanent magnet synchronous motor (PMSM) geometry used to Maxwell's equations
+  </figcaption>
+</figure>
+</div>
+<div>
+
+<i>"The speedup demonstrated by FEniCSx exceeded that of Ansys
+Maxwell using the DSO and TDM approaches. The FEniCSx model
+showed a 57% greater speedup than the Ansys Maxwell model solved
+using the DSO and a 16.5 times larger speedup than the TDM at
+identical core counts".</i><sup>7</sup>
+
+</div>
+</columns>
+<!--  footer: <sup>6</sup> FEniCS is part of the simulation tools used in the ASiMoV Strategic Partnership (UKRI, 2018-2024), ![alt text](image.png)VECTA (UKRI, 2025-2030)<br> <sup>7</sup> McDonagh, J., et al. (2022). Modelling a permanent magnet synchronous motor in FEniCSx for parallel high-performance simulations. Finite Elements in Analysis and Design, DOI: <a href=https://doi.org/10.1016/j.finel.2022.103755>10.1016/j.finel.2022.103755</a> . -->
+
+---
+
+<!--  footer:  <br><br> -->
+
+# Does companies use FEnICS at the moment?
+
+- Rafinex (Jack), closed source GUI https://www.youtube.com/watch?v=INtwTI8HFRM
+- Proxima (I've asked Masssimiliano for a figure)
+- Turbostream CFD (Jørgen)
+- Feather https://feather.solutions/ (I've asked feather for a quote)
+- Undabit (I've asked Antonio for a quote)
+- FeaTool: https://www.featool.com/
+
+---
+
+- Explain difference between FEniCS terminology and the commercial terminology
+
+- Scalability - Performance tests
+- Control
 
 ---
 
