@@ -421,7 +421,7 @@ $$
 **1963**: Symbolic Matrix Interpretive System (FORTRAN, open-access)
 
 <figure style="text-align: center;">
-  <img src="courant1943grid.png" width="600" style="max-width: 100%; height: auto;">
+  <img src="first_mesh.png" width="300" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%; padding-top: 10px;">
     First Finite Element Mesh Used for the Analysis of Gravity Dam<sup>4</sup>
   </figcaption>
@@ -429,7 +429,7 @@ $$
 
 <br>
 
-<!--  footer: <sup>3</sup>Clough, R. W. (1990). Original formulation of the finite element method. Finite elements in analysis and design, 7(2), 89-101. <br>Clough, R. W., & Wilson, E. L. (1999, August). Early finite element research at Berkeley. In Fifth US national conference on computational mechanics (pp. 1-35).-->
+<!--  footer: <sup>3</sup>Clough, R. W. (1990). Original formulation of the finite element method. Finite elements in analysis and design, 7(2), 89-101. <br><sup>4</sup>Clough, R. W., & Wilson, E. L. (1999, August). Early finite element research at Berkeley. In Fifth US national conference on computational mechanics (pp. 1-35).-->
 
 ---
 
