@@ -119,6 +119,7 @@ style: |
   color: black;
   }
 
+
   .columns {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -638,6 +639,66 @@ identical core counts".</i><sup>7</sup>
 
 ---
 
+<!--  footer: <br> -->
+
+# How to set up a problem in FEniCS?
+
+$$\min_{u_h\in V}J_h(u_h) = \int_\Omega C\epsilon(u_h): \epsilon(u_h)~\mathrm{d}x - \int_\Omega f\cdot v~\mathrm{d}x,$$
+
+```python
+import basix.ufl
+import ufl
+cell = "triangle"
+c_el = basix.ufl.element("Lagrange", cell, mesh_degree, shape=(2,))
+domain = ufl.Mesh(c_el)
+```
+
+---
+
+# How to set up a problem in FEniCS?
+
+$$\min_{u_h\in V}J_h(u_h) = \int_\Omega C\epsilon(u_h): \epsilon(u_h)~\mathrm{d}x - \int_\Omega f\cdot v~\mathrm{d}x,$$
+
+```python {color=green}
+# ....
+el = basix.ufl.element("Lagrange", cell, space_degree, shape=(2,))
+Vh = ufl.FunctionSpace(domain, el)
+uh = ufl.Coefficient(Vh)
+f = ufl.Coefficient(Vh)
+mu = ufl.Constant(domain)
+lmbda = ufl.Constant(domain)
+
+def sigma(u):
+    return lmbda _ ufl.nabla_div(u) _ ufl.Identity(len(u)) + 2 _ mu _ epsilon(u)
+
+Jh = 0.5 * ufl.inner(sigma(uh), epsilon(uh)) * ufl.dx - ufl.inner(f, uh) * ufl.dx
+```
+
+---
+
+# How to set up a problem in FEniCS?
+
+$$\min_{u_h\in V}J_h(u_h) = \int_\Omega C\epsilon(u_h): \epsilon(u_h)~\mathrm{d}x - \int_\Omega f\cdot v~\mathrm{d}x,$$
+
+<br>
+
+<div class=columns>
+<div>
+
+```python
+dv = ufl.TestFunction(Vh)
+F = ufl.derivative(Jh, uh, dv)
+du  = ufl.TrialFunction(Vh)
+Jacobian = ufl.derivative(F, uh, du)
+```
+
+</div>
+<div>
+</div>
+</div>
+
+---
+
 <!--  footer:  <br><br> -->
 
 # Does companies use FEnICS at the moment?
@@ -666,9 +727,6 @@ https://github.com/BAMresearch/fenics-constitutive
 
 Potentially interesting thesis to replicate ansys
 https://wrap.warwick.ac.uk/id/eprint/191715/1/WRAP_Theses_Curtis_2024.pdf
-
-Rolls Royce example:
-https://www.sciencedirect.com/science/article/pii/S0168874X22000312
 
 ---
 
