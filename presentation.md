@@ -313,7 +313,6 @@ backgroundPosition: bottom+10px left+10px
 - Scikit-learn (BSD-3-Clause)
 - LLama (Llama Community License Agreement)
 - DeepSeek (MIT)
-
 </div>
 <!-- <div data-marpit-fragment> -->
 
@@ -327,6 +326,7 @@ backgroundPosition: bottom+10px left+10px
 
 - It's free!
 - It's transparent
+- It's scalable for any industry
 
 ---
 
@@ -343,19 +343,30 @@ backgroundPosition: bottom+10px left+10px
 
 <div class="skewed-columns">
 <div>
+<div data-marpit-fragmen="1">
 
 - **1910s**: Rayleigh-Ritz/Ritz-Galerkin method
 
+</div>
+
+<div data-marpit-fragment="2">
+
 - **1940s**: Birth of the FEM
 - **1958**: First open source FE software
+
+</div>
+
+<div data-marpit-fragment="3">
+
 - **1970s**: General purpose FE software and mathematical rigorousness
 - **1990s**: Object oriented programming
 - **2000s**: User-friendliness (Python)
 - **2010s**: High performance computing
 
 </div>
+</div>
 
-<div>
+<div data-marpit-fragmen="1">
 
 Find $u\in V_0$ such that
 
@@ -387,14 +398,52 @@ $$
 
 ---
 
+# Brief history of the finite element method
+
+**1940s**: Sparse support Ritz-Galerkin <sup>2</sup> for plates.
+
+<figure style="text-align: center;">
+  <img src="courant1943grid.png" width="600" style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+    Figure of the computational grid used in Courant<sup>2</sup> compared with classical Ritz-Galerkin.
+  </figcaption>
+</figure>
+<br>
+
+<!--  footer:  <sup>2</sup>Courant, R. (1943). Variational methods for the solution of problems of equilibrium and vibrations. Bulletin of the American Mathematical Society, 49(1), 1-23. -->
+
+---
+
+# Brief history of the finite element method
+
+**1950s**: The birth of FEM <sup>3</sup> at Boeing
+
+**1963**: Symbolic Matrix Interpretive System (FORTRAN, open-access)
+
+<figure style="text-align: center;">
+  <img src="courant1943grid.png" width="600" style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+    First Finite Element Mesh Used for the Analysis of Gravity Dam<sup>4</sup>
+  </figcaption>
+</figure>
+
+<br>
+
+<!--  footer: <sup>3</sup>Clough, R. W. (1990). Original formulation of the finite element method. Finite elements in analysis and design, 7(2), 89-101. <br>Clough, R. W., & Wilson, E. L. (1999, August). Early finite element research at Berkeley. In Fifth US national conference on computational mechanics (pp. 1-35).-->
+
+---
+
+<!--  footer: <br><br> -->
+
 # Finite element frameworks
 
 <columns class="columns">
 
-<div>
+<div data-marpit-fragment>
 
 ### Open-source
 
+-
 - FEniCS (GPL 3.0/LGPL 3.0)
 - Elmer (GPL 2.0)
 - FreeFem (LGPL 3.0)
@@ -405,7 +454,7 @@ $$
 - ...
 </div>
 
-<div>
+<div data-marpit-fragment>
 
 ### Proprietary
 
