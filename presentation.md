@@ -626,16 +626,27 @@ identical core counts".</i><sup>7</sup>
 
 ---
 
+# How does it work?<sup>7</sup>
+
+<div>
+<figure style="text-align: center;">
+  <img src="fenics_sw_arch_v2.png" width="1600" style="max-width: 100%; height: auto;">
+</figure>
+</div>
+
+<!--  footer: <sup>7</sup> Diagram provided by James Trotter (Simula Research Laboratory) -->
+
+---
+
 <!--  footer:  <br><br> -->
 
 # Does companies use FEnICS at the moment?
 
 - Rafinex (Jack), closed source GUI https://www.youtube.com/watch?v=INtwTI8HFRM
-- Proxima (I've asked Masssimiliano for a figure)
+- Proxima (I've asked Massimiliano for a figure)
 - Turbostream CFD (Jørgen)
 - Feather https://feather.solutions/ (I've asked feather for a quote)
 - Undabit (I've asked Antonio for a quote)
-- FeaTool: https://www.featool.com/ (b)
 
 ---
 
