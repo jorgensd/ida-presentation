@@ -338,64 +338,27 @@ backgroundPosition: bottom+10px left+10px
 
 ---
 
-# Brief history of the finite element method
+# Brief history of the finite element method<sup>1</sup>
 
 <!-- ![bg width:700px opacity:.2](./Simula_logo.png) -->
 
-<div class="skewed-columns">
-<div>
-<div data-marpit-fragmen="1">
-
-- **1910s**: Rayleigh-Ritz/Ritz-Galerkin method
-
-</div>
-
-<div data-marpit-fragment="2">
-
-- **1940s**: Birth of the FEM
-- **1958**: First open source FE software
-
-</div>
-
-<div data-marpit-fragment="3">
-
-- **1970s**: General purpose FE software and mathematical rigorousness
-- **1990s**: Object oriented programming
-- **2000s**: User-friendliness (Python)
-- **2010s**: High performance computing
-
-</div>
-</div>
-
-<div data-marpit-fragmen="1">
-
+**1910s: Rayleigh-Ritz/Ritz-Galerkin method**
 Find $u\in V_0$ such that
 
 $$
 R(x) = - \nabla \cdot (\nabla u) - f = 0  \text{ in } \Omega \\
 $$
 
-Define
 
-$$
-u_h = \sum_{i=1}^{N} u_i \phi_i(x)
-$$
-
-and an inner product
-
-$$
-\langle \cdot , \cdot \rangle: V_0 \times V_0 \rightarrow \mathbb{R}
-$$
-
-such that
+Define $u_h = \sum_{i=1}^{N} u_i \phi_i(x)$ and an inner product
+$\langle \cdot , \cdot \rangle: V_0 \times V_0 \rightarrow \mathbb{R}$ such that
 
 $$
 \langle R(x), \phi_i \rangle = 0 \qquad\forall i=1,\cdots,N
 $$
 
-</div>
 
-</div>
+<!--  footer:  <sup>1</sup>Liu, W.K., Li, S. & Park, H.S. Eighty Years of the Finite Element Method: Birth, Evolution, and Future. Arch Computat Methods Eng 29, 4431–4453 (2022). DOI: <a href=https://doi.org/10.1007/s11831-022-09740-9>10.1007/s11831-022-09740-9</a> -->
 
 ---
 
@@ -593,12 +556,33 @@ Garth N. Wells (University of Cambridge)
 # FEniCS is used in a variety of SMEs
 
 <figure style="text-align: center;">
-  <img src="proxima.png" width="800" style="max-width: 100%; height: auto;">
+  <img src="Stellaris-Still_001_White_10k.png" width="800" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%; padding-top: 10px;">
     Proxima Fusion uses FEniCS to simulate heat transfer in the walls of a stellarators <br>(see: <a href=https://www.proximafusion.com>https://www.proximafusion.com//</a>)<br>
-    Image from Massimiliano Leoni (Proxima Fusion)
+    Image courtesy of Proxima Fusion
   </figcaption>
 </figure>
+
+---
+
+# FEniCS is used in a variety of SMEs
+
+<div class=skewed-columns>
+
+<div>
+<figure style="text-align: center;">
+  <img src="undabit-simulation.png" width="800" style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+    Undabit uses FEniCS for acoustic simulation <br>(see: <a href=https://www.https://undabit.com>https://undabit.com</a>)<br>
+    Image from Antonio Svizzero
+  </figcaption>
+</figure>
+
+</div>
+<div style="font-size: 20">
+<br>
+<i>"As a former user of commercial softwares, I often felt limited by their 'black box' architecture. FEniCS gives Undabit direct access to manipulate the governing equations and system matrices. This flexibility allows us to build custom tools and solve rigorous engineering challenges for real-world industrial applications that commercial software simply cannot match."</i> - Antonio Svizzero (Founder of UndaBit)
+</div>
 
 ---
 
@@ -704,10 +688,8 @@ Jacobian = ufl.derivative(F, uh, du)
 # Does companies use FEnICS at the moment?
 
 - Rafinex (Jack), closed source GUI https://www.youtube.com/watch?v=INtwTI8HFRM
-- Proxima (I've asked Massimiliano for a figure)
 - Turbostream CFD (Jørgen)
 - Feather https://feather.solutions/ (I've asked feather for a quote)
-- Undabit (I've asked Antonio for a quote)
 
 ---
 
