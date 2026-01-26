@@ -349,14 +349,12 @@ $$
 R(x) = - \nabla \cdot (\nabla u) - f = 0  \text{ in } \Omega \\
 $$
 
-
 Define $u_h = \sum_{i=1}^{N} u_i \phi_i(x)$ and an inner product
 $\langle \cdot , \cdot \rangle: V_0 \times V_0 \rightarrow \mathbb{R}$ such that
 
 $$
 \langle R(x), \phi_i \rangle = 0 \qquad\forall i=1,\cdots,N
 $$
-
 
 <!--  footer:  <sup>1</sup>Liu, W.K., Li, S. & Park, H.S. Eighty Years of the Finite Element Method: Birth, Evolution, and Future. Arch Computat Methods Eng 29, 4431–4453 (2022). DOI: <a href=https://doi.org/10.1007/s11831-022-09740-9>10.1007/s11831-022-09740-9</a> -->
 
@@ -533,7 +531,7 @@ Garth N. Wells (University of Cambridge)
 <center>
 <img src="dolfinx_paper.png" width=960>
 <br>DOI: <a href="https://doi.org/10.5281/zenodo.10447665">10.5281/zenodo.10447665</a>
-<br><img src="fenics_logo.png" width=200px>
+<br><img src="fenics_logo.png" width=150px>
 </center>
 
 ## <!--  footer: $^1$ Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
