@@ -406,24 +406,24 @@ $$
 <!-- </div> -->
 <div data-marpit-fragment="2">
 
-- **1990s**: Object oriented programming
+- **1990s**: Object oriented programming (C++: DiffPack, FreeFEM+)
 
 </div>
 <div data-marpit-fragment="3">
 
-- **2000s**: User-friendliness (Python)
+- **2000s**: User-friendliness (Python API: FEniCS)
 
 </div>
 
 <div data-marpit-fragment="4">
 
-- **2010s**: High performance computing and hybrid architectures (GPU)
+- **2010s**: High performance computing and hybrid architectures (MFEM)
 
 </div>
 <div data-marpit-fragment="5">
 
 - **2025**: Market value 6.91 billion USD <sup>5</sup>
-- **2026**: Forcast market value 25.39 billion USD <sup>5</sup>
+- **2036**: Forecast market value 25.39 billion USD <sup>5</sup>
 
 </div>
 
@@ -572,14 +572,18 @@ Garth N. Wells (University of Cambridge)
   <img src="undabit-simulation.png" width="800" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%; padding-top: 10px;">
     Undabit uses FEniCS for acoustic simulation <br>(see: <a href=https://www.https://undabit.com>https://undabit.com</a>)<br>
-    Image from Antonio Svizzero
+    Image courtesy of Antonio Svizzero
   </figcaption>
 </figure>
+</div>
+<div  style="font-size: 20px">
+<br><br><br>
+<em  style="font-size: 20px">
+"As a former user of commercial software I often felt limited by their 'black box' architecture. FEniCS gives Undabit direct access to manipulate the governing equations and system matrices. This flexibility allows us to build custom tools and solve rigorous engineering challenges for real-world industrial applications that commercial software simply cannot match."
+</em>
+Antonio Svizzero (Founder of UndaBit)
 
 </div>
-<div style="font-size: 20">
-<br>
-<i>"As a former user of commercial softwares, I often felt limited by their 'black box' architecture. FEniCS gives Undabit direct access to manipulate the governing equations and system matrices. This flexibility allows us to build custom tools and solve rigorous engineering challenges for real-world industrial applications that commercial software simply cannot match."</i> - Antonio Svizzero (Founder of UndaBit)
 </div>
 
 ---
