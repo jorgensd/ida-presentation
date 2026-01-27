@@ -154,16 +154,10 @@ backgroundPosition: bottom+10px left+10px
 <center>
 <!-- IDA Webinar 29.01.2026<br> -->
 <b>Jørgen S. Dokken</b> (Simula Research Laboratory)
-<i> dokken@simula.no </i>
-<a href="https://jsdokken.com">https://jsdokken.com</a>
-<br><br>
+<br/>
 <b>Jack S. Hale</b> (University of Luxembourg)
-<br>
-<i> jack.hale@uni.lu  </i>
-<a href="https://www.jackhale.co.uk/">https://www.jackhale.co.uk/</a>
 <div>
-<img src="fenics_logo.png" width=170px>
-<br>
+<img src="fenics_logo.png" vspace=20px width=200px>
 </div>
 
 </center>
@@ -192,13 +186,12 @@ backgroundPosition: bottom+10px left+10px
 <div data-marpit-fragment>
 <hr/>
 
-- **2014**: First introduction to FEniCS
-- **2019-today**: Forum Administrator for FEniCS
-- **2022-**: Member of the FEniCS Steering Council
+- **2014**: First introduction to FEniCS Project
+- **2022-**: Leading management and design of FEniCS Project
 
 </div>
 
-![bg right:30%](./me.jpg)
+![bg right:30%](./jorgen.jpg)
 
 ---
 
@@ -219,13 +212,24 @@ backgroundPosition: bottom+10px left+10px
 <div data-marpit-fragment>
 <hr/>
 
-- **2009**: First introduction to FEniCS
-- **2017-today**: Member and core developer of FEniCS
-- **Ongoing**: Research programme in numerical methods, scientific computing and mechanics.
+- **Ongoing**: Research lines in scientific computing and mechanics.
+- **2009**: First introduction to FEniCS Project
+- **2017-today**: Leading management and design of FEniCS Project
 
 </div>
 
-![bg right:30%](./me.jpg)
+![bg right:30%](./jhale-square.jpg)
+
+---
+
+# Outline
+
+- Computer aided engineering (CAE).
+  - Market.
+  - Main players.
+
+- What is open-source?
+
 
 ---
 
