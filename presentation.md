@@ -178,27 +178,23 @@ backgroundPosition: bottom+10px left+10px
 
 <div data-marpit-fragment>
 
-- **2014**: First introduction to FEniCS
-
-</div>
-<div data-marpit-fragment>
-
 - **2016-2019:** PhD in informatics from University of Oslo/Simula Research Laboratory (SRL)
 
 </div>
 
 <div data-marpit-fragment>
 
-- **2019-today**: Forum Administrator for FEniCS
 - **2019-2022**: Postdoctoral researcher in Department of Engineering, University of Cambridge
-
-</div>
-
-<div data-marpit-fragment>
-
-- **2022-**: Member of the FEniCS Steering Council
 - **2022-2023**: Research Engineer at SRL
 - **2024-today**: Senior Research Engineer at SRL
+
+</div>
+<div data-marpit-fragment>
+<hr/>
+
+- **2014**: First introduction to FEniCS
+- **2019-today**: Forum Administrator for FEniCS
+- **2022-**: Member of the FEniCS Steering Council
 
 </div>
 
@@ -208,11 +204,6 @@ backgroundPosition: bottom+10px left+10px
 
 # Jack S. Hale
 
-<div data-marpit-fragment>
-
-- **2009**: First introduction to FEniCS
-
-</div>
 <div data-marpit-fragment>
 
 - **2016-2019:** PhD in Aeronautical Engineering, Imperial College
@@ -225,11 +216,12 @@ backgroundPosition: bottom+10px left+10px
 - **2021-today**: Senior Research Scientist with PhD supervision rights
 
 </div>
-
 <div data-marpit-fragment>
+<hr/>
 
+- **2009**: First introduction to FEniCS
 - **2017-today**: Member and core developer of FEniCS
-- **Ongoing**: Research in numerical methods, scientific computing and mechanics.
+- **Ongoing**: Research programme in numerical methods, scientific computing and mechanics.
 
 </div>
 
