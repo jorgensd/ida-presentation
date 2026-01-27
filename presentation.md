@@ -178,9 +178,9 @@ backgroundPosition: bottom+10px left+10px
 
 <div data-marpit-fragment>
 
-- **2019-2022**: Postdoctoral researcher in Department of Engineering, University of Cambridge
-- **2022-2023**: Research Engineer at SRL
-- **2024-today**: Senior Research Engineer at SRL
+- **2019-2022**: Postdoctoral researcher at University of Cambridge
+- **2022-2023**: Research Engineer at Simula
+- **2024-today**: Senior Research Engineer at Simula
 
 </div>
 <div data-marpit-fragment>
@@ -205,8 +205,8 @@ backgroundPosition: bottom+10px left+10px
 
 <div data-marpit-fragment>
 
-- **2013-2021**: Postdoctoral Researcher, University of Luxembourg
-- **2021-today**: Senior Research Scientist with PhD supervision rights
+- **2013-2021**: Postdoctoral Researcher at University of Luxembourg
+- **2021-today**: Senior Research Scientist, University of Luxembourg
 
 </div>
 <div data-marpit-fragment>
@@ -228,11 +228,11 @@ backgroundPosition: bottom+10px left+10px
 - What are "open-source simulation tools"?
   - Open-source
   - Simulation
-- Who are they aimed at?
 - What does open-source enable?
+- Who are they aimed at?
 - Case studies
-- FEniCS Project (demo).
-- Some hard truths (limitations)
+- A demo of the FEniCS Project
+- Some hard truths
 - The future
 
 ---
