@@ -224,12 +224,13 @@ backgroundPosition: bottom+10px left+10px
 
 # Outline
 
-- Computer aided engineering (CAE).
-  - Market.
-  - Main players.
-
-- What is open-source?
-
+- Why is simulation important? 
+- What are "open-source simulation tools?"
+- Who are they aimed at?
+- What does open-source enable?
+- Some hard truths (limitations)
+- Case studies
+- The future
 
 ---
 
