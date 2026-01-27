@@ -225,9 +225,10 @@ backgroundPosition: bottom+10px left+10px
 # Outline
 
 - Why is simulation important? 
-- What are "open-source simulation tools?"
+- What are "open-source simulation tools"?
 - Who are they aimed at?
 - What does open-source enable?
+- FEniCS Project.
 - Some hard truths (limitations)
 - Case studies
 - The future
