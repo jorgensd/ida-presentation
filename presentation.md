@@ -170,11 +170,11 @@ backgroundPosition: bottom+10px left+10px
 
 ---
 
-# About ourselves (1 slide per person)
+# About us
 
 ---
 
-# About me
+# Jørgen S. Dokken
 
 <div data-marpit-fragment>
 
@@ -189,8 +189,8 @@ backgroundPosition: bottom+10px left+10px
 
 <div data-marpit-fragment>
 
-- **2019-**: Forum Administrator for FEniCS
-- **2019-2022**: Post-doc at Department of Engineering, University of Cambridge
+- **2019-today**: Forum Administrator for FEniCS
+- **2019-2022**: Postdoctoral researcher in Department of Engineering, University of Cambridge
 
 </div>
 
@@ -198,7 +198,38 @@ backgroundPosition: bottom+10px left+10px
 
 - **2022-**: Member of the FEniCS Steering Council
 - **2022-2023**: Research Engineer at SRL
-- **2024--**: Senior Research Engineer at SRL
+- **2024-today**: Senior Research Engineer at SRL
+
+</div>
+
+![bg right:30%](./me.jpg)
+
+---
+
+# Jack S. Hale
+
+<div data-marpit-fragment>
+
+- **2009**: First introduction to FEniCS
+
+</div>
+<div data-marpit-fragment>
+
+- **2016-2019:** PhD in Aeronautical Engineering, Imperial College
+
+</div>
+
+<div data-marpit-fragment>
+
+- **2013-2021**: Postdoctoral Researcher, University of Luxembourg
+- **2021-today**: Senior Research Scientist with PhD supervision rights
+
+</div>
+
+<div data-marpit-fragment>
+
+- **2017-today**: Member and core developer of FEniCS
+- **Ongoing**: Research in numerical methods, scientific computing and mechanics.
 
 </div>
 
@@ -269,6 +300,8 @@ backgroundPosition: bottom+10px left+10px
 
 # What kind of tools exist that is open-source?
 
+<!--  footer:  <sup>3</sup> lewing@isc.tamu.edu Larry Ewing and The GIMP, Attribution, https://commons.wikimedia.org/w/index.php?curid=80930 <br> <sup>4</sup> Licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> <br><sup>5</sup> Unaltered logo from <a href="https://www.python.org/community/logos/">https://www.python.org/community/logos/</a> -->
+
 <div style="display: flex; gap: 20px; align-items: flex-end;">
   
   <figure data-marpit-fragment style="margin: 0; display: flex; flex-direction: column; align-items: center; width: 333px;">
@@ -294,10 +327,8 @@ backgroundPosition: bottom+10px left+10px
       logo from <sup>5</sup>
     </figcaption>
   </figure>
-
 </div>
 
-<!--  footer:  <sup>3</sup> lewing@isc.tamu.edu Larry Ewing and The GIMP, Attribution, https://commons.wikimedia.org/w/index.php?curid=80930 <br> <sup>4</sup> Licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> <br><sup>5</sup> Unaltered logo from <a href="https://www.python.org/community/logos/">https://www.python.org/community/logos/</a> -->
 
 ---
 
