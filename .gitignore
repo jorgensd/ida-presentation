@@ -328,3 +328,6 @@ TSWLatexianTemp*
 node_modules
 *.xdmf
 *.h5
+*.bp/
+*.msh
+*-checkpoint.ipynb
