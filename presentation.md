@@ -469,6 +469,10 @@ IDA Webinar 29/01/2026<br>
 
 ---
 
+Safety critical project - nuclear energy
+
+---
+
 # Cost and access
 
 - Low barrier for entry, academia, SMEs and global collaboration.
@@ -476,7 +480,40 @@ IDA Webinar 29/01/2026<br>
 
 ---
 
+Show example of collaborative academic project
+
+---
+
 # Performance potential
+
+- Modern open-source simulation software is *world class*.
+- Scalability, performance, energy-use.
+
+---
+
+# Rolls-Royce
+
+<!--  footer: McDonagh, J., et al. (2022). Modelling a permanent magnet synchronous motor in FEniCSx for parallel high-performance simulations. Finite Elements in Analysis and Design, DOI: <a href=https://doi.org/10.1016/j.finel.2022.103755>10.1016/j.finel.2022.103755</a> . -->
+
+<div class=skewed-columns>
+<div>
+<figure style="text-align: center;">
+  <img src="rolls_royce_PMSM.png" width="600" style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+    Permanent magnet synchronous motor (PMSM) geometry used to Maxwell's equations
+  </figcaption>
+</figure>
+</div>
+<div>
+
+<i>"The speedup demonstrated by FEniCSx exceeded that of Ansys
+Maxwell using the DSO and TDM approaches. The FEniCSx model
+showed a 57% greater speedup than the Ansys Maxwell model solved
+using the DSO and a 16.5 times larger speedup than the TDM at
+identical core counts".</i><sup>7</sup>
+
+</div>
+</columns>
 
 ---
 
@@ -703,32 +740,6 @@ Antonio Svizzero (Founder of UndaBit)
 </div>
 </div>
 
----
-
-# FEniCS is also used by Rolls Royce <sup>6</sup>
-
-<div class=skewed-columns>
-<div>
-<figure style="text-align: center;">
-  <img src="rolls_royce_PMSM.png" width="600" style="max-width: 100%; height: auto;">
-  <figcaption style="font-size: 50%; padding-top: 10px;">
-    Permanent magnet synchronous motor (PMSM) geometry used to Maxwell's equations
-  </figcaption>
-</figure>
-</div>
-<div>
-
-<i>"The speedup demonstrated by FEniCSx exceeded that of Ansys
-Maxwell using the DSO and TDM approaches. The FEniCSx model
-showed a 57% greater speedup than the Ansys Maxwell model solved
-using the DSO and a 16.5 times larger speedup than the TDM at
-identical core counts".</i><sup>7</sup>
-
-</div>
-</columns>
-<!--  footer: <sup>6</sup> FEniCS is part of the simulation tools used in the ASiMoV Strategic Partnership (UKRI, 2018-2024), ![alt text](image.png)VECTA (UKRI, 2025-2030)<br> <sup>7</sup> McDonagh, J., et al. (2022). Modelling a permanent magnet synchronous motor in FEniCSx for parallel high-performance simulations. Finite Elements in Analysis and Design, DOI: <a href=https://doi.org/10.1016/j.finel.2022.103755>10.1016/j.finel.2022.103755</a> . -->
-
----
 
 # How does it work?<sup>7</sup>
 
