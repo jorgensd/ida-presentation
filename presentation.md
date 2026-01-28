@@ -224,13 +224,13 @@ IDA Webinar 29/01/2026<br>
 
 # Outline
 
-- Why this talk and why should you be interested? 
+- Why this talk and why should you be interested?
 - What are "open-source simulation tools"?
+  - Engineering Simulation
   - Open-source
-  - Simulation
-- What does open-source enable?
+- What do open-source simulations enable?
 - Who are they aimed at?
-- What are the constraints?
+- What are the constraints and limitations?
 - Case studies
 - A demo of the FEniCS Project
 - The future
@@ -254,13 +254,28 @@ IDA Webinar 29/01/2026<br>
 - Geometry/CAD → Mesh → Simulation → Postprocessing → Reporting. 
 
 <figure style="text-align: center;">
-  <img src="Plasticity.jpg" width="550" style="max-width: 100%; height: auto;"/>
+  <img src="Plasticity.jpg" width="450" style="max-width: 100%; height: auto;"/>
   <figcaption style="font-size: 50%; padding-top: 10px;">
-    Salome FEA, LGPLv2+<sup>2</sup>
+    Salome FEA, LGPLv2+
   </figcaption>
 </figure>
 
 <!-- footer: By Joël Cugnoni - http://www.caelinux.com, GPL, https://commons.wikimedia.org/w/index.php?curid=3893245 -->
+
+---
+
+# Engineering Simulation Workflow
+
+- Geometry/CAD → Mesh → Simulation → Postprocessing → Reporting. 
+
+<figure style="text-align: center;">
+  <img src="Plasticity.jpg" width="450" style="max-width: 100%; height: auto;"/>
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+    Rafinex, cloud-based, uses open-source internally.
+  </figcaption>
+</figure>
+
+<!-- footer: Rafinex Sarl, http://rafinex.com -->
 
 ---
 
@@ -273,6 +288,7 @@ IDA Webinar 29/01/2026<br>
   - OpenCascade → Gmsh → FEniCS → Paraview → Custom.  
 
 ---
+
 # What is open-source?
 
 <div data-marpit-fragment>
@@ -404,6 +420,63 @@ IDA Webinar 29/01/2026<br>
   - *False* for weakly protected code - open-source obligations restricted to open-source code. 
   - *False* for most normal uses of strongly protected code, e.g. using Linux, using MySQL, using Firefox.
 
+---
+
+# Opportunities 
+
+---
+
+# Faster, unconstrained innovation
+
+- Community-driven features.
+- Rapid prototyping of new full solvers.
+- Research-to-production path: new discretisations, preconditioners, automatic
+  differentiation.
+
+---
+
+<figure style="text-align: center;">
+  <img src="firon.png" width="1000" style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+    Firon ApS is a Danish startup that uses FEniCS to predict CNC milling vibrations (see: <a href=https://firon.dk>https://firon.dk/</a>)
+  </figcaption>
+</figure>
+
+---
+
+<figure style="text-align: center;">
+  <img src="Stellaris-Still_001_White_10k.png" width="800" style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+    Proxima Fusion uses FEniCS to simulate heat transfer in the walls of a stellarators <br>(see: <a href=https://www.proximafusion.com>https://www.proximafusion.com//</a>)<br>
+    Image courtesy of Proxima Fusion
+  </figcaption>
+</figure>
+
+---
+
+# Composability and interoperability
+
+- "Unix philosophy" - do one thing and do it well. 
+- Open data.
+- Open programming interfaces (APIs).
+
+---
+
+# Reproducibility and transparency
+
+- Inspect algorithms, verify assumptions, audit numerics.
+- Build reproducible pipelines.
+
+---
+
+# Cost and access
+
+- Low barrier for entry, academia, SMEs and global collaboration.
+- Avoid vendor lock-in; long-term maintainability.
+
+---
+
+# Performance potential
 
 ---
 
@@ -605,32 +678,7 @@ Garth N. Wells (University of Cambridge)
 
 ## <!--  footer: $^1$ Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
 
----
 
-# FEniCS is used in a variety of SMEs
-
-<figure style="text-align: center;">
-  <img src="firon.png" width="1000" style="max-width: 100%; height: auto;">
-  <figcaption style="font-size: 50%; padding-top: 10px;">
-    Firon ApS is a Danish startup that uses FEniCS to predict CNC milling vibrations (see: <a href=https://firon.dk>https://firon.dk/</a>)
-  </figcaption>
-</figure>
-
-<!--  footer:  <br><br> -->
-
----
-
-# FEniCS is used in a variety of SMEs
-
-<figure style="text-align: center;">
-  <img src="Stellaris-Still_001_White_10k.png" width="800" style="max-width: 100%; height: auto;">
-  <figcaption style="font-size: 50%; padding-top: 10px;">
-    Proxima Fusion uses FEniCS to simulate heat transfer in the walls of a stellarators <br>(see: <a href=https://www.proximafusion.com>https://www.proximafusion.com//</a>)<br>
-    Image courtesy of Proxima Fusion
-  </figcaption>
-</figure>
-
----
 
 # FEniCS is used in a variety of SMEs
 
