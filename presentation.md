@@ -230,9 +230,9 @@ backgroundPosition: bottom+10px left+10px
   - Open-source
 - What does open-source enable?
 - Who are they aimed at?
+- What are the constraints?
 - Case studies
 - A demo of the FEniCS Project
-- Some hard truths
 - The future
 
 ---
@@ -242,12 +242,17 @@ backgroundPosition: bottom+10px left+10px
 - *Simulation* has become a key enabling tool in Engineering and Science.
 - Demands from industry and academia are forcing change:
   - Diversity, complexity, uncertainty.
-  - Reproducibility.
-  - Novel hardware.
+  - Reproducibility and transparency.
+  - Novel computing hardware.
   - Budget constraints.
 
 ---
 
+# Simulation tools
+
+
+
+---
 # What does open-source mean?
 
 <div data-marpit-fragment>
@@ -260,14 +265,14 @@ backgroundPosition: bottom+10px left+10px
 
 ---
 
-# Requirements of open-source$^{1}$
+# Requirements of open-source licensing$^{1}$
 
 <!--  footer: <sup>1</sup>https://opensource.org/definition-annotated -->
 
 <div data-marpit-fragment>
 <div>
 
-- **Free Redistribution**: Anyone should be able to redistribute the code, without having to pay a royalty or licence fee
+- **Free Redistribution**: Anyone should be able to redistribute the code under the same license terms, without having to pay a royalty or fee
 
 </div>
 </div>
@@ -275,14 +280,13 @@ backgroundPosition: bottom+10px left+10px
 <div>
 
 - **Source code availability**: Program must include source code and allow redistribution of source code.
-- **Derived works**: Must allow for modifications or derived works that can be published under the same license.
+- **Derived works**: Must allow for modifications or derived works to be published under the same license.
 
 </div>
 </div>
 <div data-marpit-fragment>
 
-- **Integrity of authors code**: Publishing derived works can be restricted **if and only if** the software allows for patch files that can be used at build time.
-- **No discrimination against persons, groups or fields of endeavour**
+- **No discrimination** against persons, groups or fields of endeavour
 
 </div>
 </div>
