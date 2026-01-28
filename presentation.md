@@ -226,14 +226,25 @@ backgroundPosition: bottom+10px left+10px
 
 - Why this talk and why should you be interested? 
 - What are "open-source simulation tools"?
-  - Open-source
   - Simulation
+  - Open-source
 - What does open-source enable?
 - Who are they aimed at?
 - Case studies
 - A demo of the FEniCS Project
 - Some hard truths
 - The future
+
+---
+
+# Why now?
+
+- *Simulation* has become a key enabling tool in Engineering and Science.
+- Demands from industry and academia are forcing change:
+  - Diversity, complexity, uncertainty.
+  - Reproducibility.
+  - Novel hardware.
+  - Budget constraints.
 
 ---
 
