@@ -25,15 +25,18 @@ facet_tags = mesh_data.facet_tags
 import pyvista
 
 grid = pyvista.UnstructuredGrid(*dolfinx.plot.vtk_mesh(domain))
-plotter = pyvista.Plotter()
+plotter = pyvista.Plotter(shape=(1, 2))
+plotter.subplot(0,0)
 plotter.add_mesh(grid, show_edges=True)
-plotter.show()
 
-# The grid is actually second order, to see this with pyvista we use
+# Additionally we add the facet markers
 
-plotter = pyvista.Plotter()
-curved_grid = grid.tessellate()
-plotter.add_mesh(curved_grid)
+markers = pyvista.UnstructuredGrid(*dolfinx.plot.vtk_mesh(domain, domain.topology.dim-1, facet_tags.indices))
+markers.cell_data["markers"] = facet_tags.values
+plotter.subplot(0,1)
+plotter.add_mesh(grid, style="wireframe")
+plotter.add_mesh(markers)
+plotter.link_views()
 plotter.show()
 
 # We can store the mesh to XDMF to visualize it in Paraview
