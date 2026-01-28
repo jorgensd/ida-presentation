@@ -7,3 +7,9 @@ You can either use marp for vscode, or generate the presentation from commandlin
 ```bash
 npx @marp-team/marp-cli@latest presentation.md -o presentation.html --html
 ```
+
+Server with live updates
+
+```bash
+npx @marp-team/marp-cli@latest -s .  --html
+```
