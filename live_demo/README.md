@@ -25,7 +25,7 @@ python3 -m jupytext script.py --to ipynb
 # Meshing pipeline
 
 1. Look at step file (`gmsh part_less_fillets.step`)
-2. Convert into mesh (`gmsh mesh_geo`)
+2. Convert into mesh (`gmsh mesh.geo`)
    a. Press `Mesh->3D`
    b. Press `Mesh->Refine by splitting`
    c. Press `Mesh->Optimize 3D (NetGen)`
