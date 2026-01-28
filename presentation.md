@@ -265,14 +265,22 @@ backgroundPosition: bottom+10px left+10px
 
 ---
 
-# Requirements of open-source licensing$^{1}$
+# The Process
+
+1. Someone creates some code. They hold copyright.
+2. They would like to share their work, but they would like others to credit them and/or share their changes as well.
+3. They decide to use an open-source license.
+
+---
+
+# Main requirements of open-source$^{1}$
 
 <!--  footer: <sup>1</sup>https://opensource.org/definition-annotated -->
 
 <div data-marpit-fragment>
 <div>
 
-- **Free Redistribution**: Anyone should be able to redistribute the code under the same license terms, without having to pay a royalty or fee
+- **Free Redistribution**: Anyone should be able to redistribute the code under the same license terms, without having to pay a royalty or fee to the creator.
 
 </div>
 </div>
@@ -280,29 +288,32 @@ backgroundPosition: bottom+10px left+10px
 <div>
 
 - **Source code availability**: Program must include source code and allow redistribution of source code.
-- **Derived works**: Must allow for modifications or derived works to be published under the same license.
+- **Derived works**: Must allow for modifications or derived works that can be published under the same license.
 
 </div>
 </div>
 <div data-marpit-fragment>
 
-- **No discrimination** against persons, groups or fields of endeavour
+- **No discrimination** against persons, groups or fields of endeavour.
 
 </div>
 </div>
-<div data-marpit-fragment>
-
-- **Cannot force license requirements on software bundled alongside** (independent code)
-
 </div>
-</div>
+
+---
+
+# Open-source models
+
+- *Liberal:* Do what you want, just make sure I get credit (US Universities, Apple).
+- *Balanced*: If you make changes to my code, share. Your code remains yours. (FEniCS).  
+- *Share*: If you use (link) my code, your must also share your code (Linux, MySQL). 
 
 ---
 
 <!--  footer: <sup>2</sup>By David A. Wheeler, et al. - The Free-Libre / Open Source Software (FLOSS) License Slide by Dwheeler (2007-09-27)About MPL 2.0: Revision Process and Changes FAQ — Mozilla, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=93181991
  -->
 
-# What kind of open-source licenses exist?
+# Common licenses
 
 <figure style="text-align: center;">
   <img src="Floss-license-slide-image.svg" width="1300" style="max-width: 100%; height: auto;">
