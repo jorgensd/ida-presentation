@@ -362,13 +362,23 @@ backgroundPosition: bottom+10px left+10px
 
 # Some common misconceptions
 
-- "Free" means no money: *false*.
-  - RedHat: Sells compiled Linux distribution and support.
+- "Free" means I can't make money: *false*.
+  - RedHat: Sells compiled Linux distribution and expensive support contracts.
   - gmsh (mesher): Sells license to allow integration into commercial code.
+
+---
+
+# Some common misconceptions
+
 - If I use/modify open-source code internally at my company, I must give back my changes: *false*.
+
+---
+
+# Some common misconceptions
+
 - If I distribute my code and it uses open-source code, then my code must be open-source too.
-  - *False* for permissive code - just credit.
-  - *False* for weakly protected code - just changes to that code. 
+  - *False* for permissive code - just give credit.
+  - *False* for weakly protected code - open-source obligations restricted to open-source code. 
   - *False* for many uses of strongly protected code, e.g. using Linux, using MySQL.
 
 ---
