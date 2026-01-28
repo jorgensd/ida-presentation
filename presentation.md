@@ -309,7 +309,7 @@ IDA Webinar 29/01/2026<br>
 
 ---
 
-# Main requirements of open-source$^{1}$
+# Definition of open-source$^{1}$
 
 <!--  footer: <sup>1</sup>https://opensource.org/definition-annotated - 10 terms in definition. -->
 
@@ -499,16 +499,14 @@ Show example of collaborative academic project
 <div>
 <figure style="text-align: center;">
   <img src="rolls_royce_PMSM.png" width="600" style="max-width: 100%; height: auto;">
-  <figcaption style="font-size: 50%; padding-top: 10px;">
+  <figcaption style="font-size: 50%;">
     Permanent magnet synchronous motor (PMSM) geometry used to Maxwell's equations
   </figcaption>
 </figure>
 </div>
 <div>
 
-<i>"The speedup demonstrated by FEniCSx exceeded that of Ansys
-Maxwell using the DSO and TDM approaches. The FEniCSx model
-showed a 57% greater speedup than the Ansys Maxwell model solved
+<i>"The FEniCSx model showed a 57% greater speedup than the Ansys Maxwell model solved
 using the DSO and a 16.5 times larger speedup than the TDM at
 identical core counts".</i><sup>7</sup>
 
