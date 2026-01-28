@@ -152,7 +152,7 @@ backgroundPosition: bottom+10px left+10px
 # Open-source simulation tools – opportunities and limitations
 
 <center>
-<!-- IDA Webinar 29.01.2026<br> -->
+IDA Webinar 29/01/2026<br>
 <b>Jørgen S. Dokken</b> (Simula Research Laboratory)
 <br/>
 <b>Jack S. Hale</b> (University of Luxembourg)
@@ -226,8 +226,8 @@ backgroundPosition: bottom+10px left+10px
 
 - Why this talk and why should you be interested? 
 - What are "open-source simulation tools"?
-  - Simulation
   - Open-source
+  - Simulation
 - What does open-source enable?
 - Who are they aimed at?
 - What are the constraints?
@@ -242,18 +242,38 @@ backgroundPosition: bottom+10px left+10px
 - *Simulation* has become a key enabling tool in Engineering and Science.
 - Demands from industry and academia are forcing change:
   - Diversity, complexity, uncertainty.
-  - Reproducibility and transparency.
+  - Reproducibility, transparency, auditability.
   - Novel computing hardware.
   - Budget constraints.
+- Proprietary, open-source and hybrid licensed software will respond.
 
 ---
 
-# Simulation tools
+# Engineering Simulation Workflow
 
+- Geometry/CAD → Mesh → Simulation → Postprocessing → Reporting. 
 
+<figure style="text-align: center;">
+  <img src="Plasticity.jpg" width="550" style="max-width: 100%; height: auto;"/>
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+    Salome FEA, LGPLv2+<sup>2</sup>
+  </figcaption>
+</figure>
+
+<!-- footer: By Joël Cugnoni - http://www.caelinux.com, GPL, https://commons.wikimedia.org/w/index.php?curid=3893245 -->
 
 ---
-# What does open-source mean?
+
+# Engineering Simulation Workflow (cont.)
+
+- Geometry/CAD → Mesh → Simulation → Postprocessing → Reporting. 
+- Proprietary (Dassault Simulia):
+  - Catia V5 → Abaqus pre-processing → Abaqus/Standard → Abaqus postprocessing → Custom.
+- Open source (multiple providers):
+  - OpenCascade → Gmsh → FEniCS → Paraview → Custom.  
+
+---
+# What is open-source?
 
 <div data-marpit-fragment>
 <div>
@@ -268,14 +288,14 @@ backgroundPosition: bottom+10px left+10px
 # The Process
 
 1. Someone creates some code. They hold copyright.
-2. They would like to share their work, but they would like others to credit them and/or share their changes as well.
-3. They decide to use an open-source license.
+2. They would like to freely share their work, but they would like others to credit them and/or share too.
+3. An open-source license is the right solution.
 
 ---
 
 # Main requirements of open-source$^{1}$
 
-<!--  footer: <sup>1</sup>https://opensource.org/definition-annotated -->
+<!--  footer: <sup>1</sup>https://opensource.org/definition-annotated - 10 terms in definition. -->
 
 <div data-marpit-fragment>
 <div>
@@ -302,11 +322,13 @@ backgroundPosition: bottom+10px left+10px
 
 ---
 
+<!--  footer: <br/><br/> -->
+
 # Open-source license models
 
-- *Permissive:* Do what you want, just make sure I get credit (US Universities, Apple).
-- *Weakly protective*: If you make changes to my code, share. Your code remains yours. (FEniCS).  
-- *Strongly protective*: If you use (link) my code, the combined work must also be GPL (Linux, MySQL). 
+- **Permissive:** Do what you want, just make sure I get credit (US Universities, Apple open-source, Microsoft open-source).
+- **Weakly protective**: If you make changes to my code, the new work must also be weakly protected. Your code remains yours (FEniCS, FFmpeg, GMP).  
+- **Strongly protective**: If you link to, copy or modify my code, our combined work must also be strongly protected (Linux, MySQL). 
 
 ---
 
@@ -333,7 +355,7 @@ backgroundPosition: bottom+10px left+10px
   
   <figure data-marpit-fragment style="margin: 0; display: flex; flex-direction: column; align-items: center; width: 333px;">
     GPLv2
-    <img src="Tux.png" width="200">
+    <img src="Tux.png" width="200"/>
     <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
       logo by Larry Ewing<sup>3</sup>
     </figcaption>
@@ -341,7 +363,7 @@ backgroundPosition: bottom+10px left+10px
 
   <figure data-marpit-fragment style="margin: 0; display: flex; flex-direction: column; align-items: center; width: 333px;">
     GPLv2
-    <img src="git.png" width="200">
+    <img src="git.png" width="200"/>
     <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
       logo by Jason Long<sup>4</sup>
     </figcaption>
@@ -349,13 +371,12 @@ backgroundPosition: bottom+10px left+10px
 
   <figure data-marpit-fragment style="margin: 0; display: flex; flex-direction: column; align-items: center; width: 500px;">
     PSFL (GPL-compatible*)
-    <img src="Python-logo.png" width="340">
+    <img src="Python-logo.png" width="340"/>
     <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
       logo from <sup>5</sup>
     </figcaption>
   </figure>
 </div>
-
 
 ---
 <!--  footer:  <br><br> -->
@@ -363,40 +384,26 @@ backgroundPosition: bottom+10px left+10px
 # Some common misconceptions
 
 - "Free" means I can't make money: *false*.
-  - RedHat: Sells compiled Linux distribution and expensive support contracts.
-  - gmsh (mesher): Sells license to allow integration into commercial code.
+  - RedHat: Sells compiled Linux distribution and support contracts.
+  - gmsh (mesher, GPL): Sells license to allow integration into commercial code.
+  - MySQL: Feature complete open-source product + enterprise add-ons.
 
 ---
 
-# Some common misconceptions
+# Some common misconceptions (cont.)
 
 - If I use/modify open-source code internally at my company, I must give back my changes: *false*.
+  - "Distribution" means between legal persons.
 
 ---
 
-# Some common misconceptions
+# Some common misconceptions (cont.)
 
-- If I distribute my code and it uses open-source code, then my code must be open-source too.
+- If I distribute my code and it uses open-source code, then all of my code must be open-source too.
   - *False* for permissive code - just give credit.
   - *False* for weakly protected code - open-source obligations restricted to open-source code. 
-  - *False* for many uses of strongly protected code, e.g. using Linux, using MySQL.
+  - *False* for most normal uses of strongly protected code, e.g. using Linux, using MySQL, using Firefox.
 
----
-
-<!--  footer:  <br><br> -->
-
-# Benefits of open-source
-
-- It's free!
-- It's transparent
-- It's scalable for any industry
-
----
-
-# Potential issues with open-source
-
-- User-support
-- Long-term viability
 
 ---
 
