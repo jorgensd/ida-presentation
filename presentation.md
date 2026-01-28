@@ -287,7 +287,7 @@ backgroundPosition: bottom+10px left+10px
 <div data-marpit-fragment>
 <div>
 
-- **Source code availability**: Program must include source code and allow redistribution of source code.
+- **Source code availability**: Compiled program must include source code and allow for redistribution of source code.
 - **Derived works**: Must allow for modifications or derived works that can be published under the same license.
 
 </div>
@@ -302,18 +302,18 @@ backgroundPosition: bottom+10px left+10px
 
 ---
 
-# Open-source models
+# Open-source license models
 
-- *Liberal:* Do what you want, just make sure I get credit (US Universities, Apple).
-- *Balanced*: If you make changes to my code, share. Your code remains yours. (FEniCS).  
-- *Share*: If you use (link) my code, your must also share your code (Linux, MySQL). 
+- *Permissive:* Do what you want, just make sure I get credit (US Universities, Apple).
+- *Weakly protective*: If you make changes to my code, share. Your code remains yours. (FEniCS).  
+- *Strongly protective*: If you use (link) my code, the combined work must also be GPL (Linux, MySQL). 
 
 ---
 
 <!--  footer: <sup>2</sup>By David A. Wheeler, et al. - The Free-Libre / Open Source Software (FLOSS) License Slide by Dwheeler (2007-09-27)About MPL 2.0: Revision Process and Changes FAQ — Mozilla, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=93181991
  -->
 
-# Common licenses
+# Commonly used licenses
 
 <figure style="text-align: center;">
   <img src="Floss-license-slide-image.svg" width="1300" style="max-width: 100%; height: auto;">
@@ -322,9 +322,10 @@ backgroundPosition: bottom+10px left+10px
   </figcaption>
 </figure>
 
+
 ---
 
-# What kind of tools exist that is open-source?
+# Classic examples of open-source software
 
 <!--  footer:  <sup>3</sup> lewing@isc.tamu.edu Larry Ewing and The GIMP, Attribution, https://commons.wikimedia.org/w/index.php?curid=80930 <br> <sup>4</sup> Licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> <br><sup>5</sup> Unaltered logo from <a href="https://www.python.org/community/logos/">https://www.python.org/community/logos/</a> -->
 
@@ -357,24 +358,18 @@ backgroundPosition: bottom+10px left+10px
 
 
 ---
+<!--  footer:  <br><br> -->
 
-<!--  footer: <br><br> -->
+# Some common misconceptions
 
-# Open-source software in ML
-
-<!-- <columns class="columns"> -->
-
-<div>
-
-- Tensorflow (Apache 2.0)
-- PyTorch (Modified BSD)
-- Scikit-learn (BSD-3-Clause)
-- LLama (Llama Community License Agreement)
-- DeepSeek (MIT)
-</div>
-<!-- <div data-marpit-fragment> -->
-
-<columns>
+- "Free" means no money: *false*.
+  - RedHat: Sells compiled Linux distribution and support.
+  - gmsh (mesher): Sells license to allow integration into commercial code.
+- If I use/modify open-source code internally at my company, I must give back my changes: *false*.
+- If I distribute my code and it uses open-source code, then my code must be open-source too.
+  - *False* for permissive code - just credit.
+  - *False* for weakly protected code - just changes to that code. 
+  - *False* for many uses of strongly protected code, e.g. using Linux, using MySQL.
 
 ---
 
