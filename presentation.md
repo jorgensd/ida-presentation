@@ -238,7 +238,7 @@ IDA Webinar 29/01/2026<br>
 
 # Why now?
 
-- *Simulation* has become a key enabling tool in Engineering and Science.
+- <b>Simulation</b> has become a key enabling tool in Engineering and Science.
 - Demands from industry and academia are forcing change:
   - Diversity, complexity, uncertainty.
   - Reproducibility, transparency, auditability.
@@ -250,26 +250,28 @@ IDA Webinar 29/01/2026<br>
 
 # Engineering Simulation Workflow
 
-- Geometry/CAD → Mesh → Simulation → Postprocessing → Reporting. 
+- Geometry/CAD → Mesh → Simulation → Postprocessing → Reporting.
 
 <figure style="text-align: center;">
   <img src="Plasticity.jpg" width="450" style="max-width: 100%; height: auto;"/>
   <figcaption style="font-size: 50%; padding-top: 10px;">
-    Salome FEA, LGPLv2+
+    Salome FEA, LGPLv2+<sup>1</sup>
   </figcaption>
 </figure>
 
-<!-- footer: By Joël Cugnoni - http://www.caelinux.com, GPL, https://commons.wikimedia.org/w/index.php?curid=3893245 -->
+<!-- footer: <sup>1</sup>By Joël Cugnoni - http://www.caelinux.com, GPL, https://commons.wikimedia.org/w/index.php?curid=3893245 -->
 
 ---
 
+<!-- footer: <br><br> -->
+
 # Engineering Simulation Workflow (cont.)
 
-- Geometry/CAD → Mesh → Simulation → Postprocessing → Reporting. 
+- Geometry/CAD → Mesh → Simulation → Postprocessing → Reporting.
 - Proprietary integrated (Dassault Simulia) e.g.:
   - Catia V5 → Abaqus pre-processing → Abaqus/Standard → Abaqus postprocessing → Custom.
 - Open-source interoperable e.g.:
-  - FreeCAD/OpenCascade → Gmsh → **FEniCS** → Paraview → Custom.  
+  - FreeCAD/OpenCascade → Gmsh → <b style="color:#f15922">FEniCS</b> → Paraview → Custom.
 - Open-source integrated e.g.:
   - Salome FEA, agros, FreeCAD, Elmer.
 
@@ -295,9 +297,9 @@ IDA Webinar 29/01/2026<br>
 
 ---
 
-# Definition of open-source$^{1}$
+# Definition of open-source$^{2}$
 
-<!--  footer: <sup>1</sup>https://opensource.org/definition-annotated - 10 terms in definition. -->
+<!--  footer: <sup>2</sup>https://opensource.org/definition-annotated - 10 terms in definition. -->
 
 <div data-marpit-fragment>
 <div>
@@ -329,12 +331,12 @@ IDA Webinar 29/01/2026<br>
 # Open-source license models (simplified)
 
 - **Permissive:** Do what you want, just make sure I get credit (US Universities, Apple open-source, Microsoft open-source).
-- **Weakly protective**: If you make changes to my code, the new work must also be weakly protected. Your code remains yours (FEniCS, FFmpeg, GMP).  
-- **Strongly protective**: If you link to, copy or modify my code, our combined work must also be strongly protected (Linux, MySQL). 
+- **Weakly protective**: If you make changes to my code, the new work must also be weakly protected. Your code remains yours (FEniCS, FFmpeg, GMP).
+- **Strongly protective**: If you link to, copy or modify my code, our combined work must also be strongly protected (Linux, MySQL).
 
 ---
 
-<!--  footer: <sup>2</sup>By David A. Wheeler, et al. - The Free-Libre / Open Source Software (FLOSS) License Slide by Dwheeler (2007-09-27)About MPL 2.0: Revision Process and Changes FAQ — Mozilla, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=93181991
+<!--  footer: <sup>3</sup>By David A. Wheeler, et al. - The Free-Libre / Open Source Software (FLOSS) License Slide by Dwheeler (2007-09-27)About MPL 2.0: Revision Process and Changes FAQ — Mozilla, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=93181991
  -->
 
 # Commonly used licenses
@@ -342,16 +344,15 @@ IDA Webinar 29/01/2026<br>
 <figure style="text-align: center;">
   <img src="Floss-license-slide-image.svg" width="1300" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%; padding-top: 10px;">
-    Figure by  David A. Wheeler et al.<sup>2</sup>
+    Figure by  David A. Wheeler et al.<sup>3</sup>
   </figcaption>
 </figure>
-
 
 ---
 
 # Classic examples of open-source software
 
-<!--  footer:  <sup>3</sup> lewing@isc.tamu.edu Larry Ewing and The GIMP, Attribution, https://commons.wikimedia.org/w/index.php?curid=80930 <br> <sup>4</sup> Licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> <br><sup>5</sup> Unaltered logo from <a href="https://www.python.org/community/logos/">https://www.python.org/community/logos/</a> -->
+<!--  footer:  <sup>4</sup> lewing@isc.tamu.edu Larry Ewing and The GIMP, Attribution, https://commons.wikimedia.org/w/index.php?curid=80930 <br> <sup>5</sup> Licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> <br><sup>6</sup> Unaltered logo from <a href="https://www.python.org/community/logos/">https://www.python.org/community/logos/</a> -->
 
 <div style="display: flex; gap: 20px; align-items: flex-end;">
   
@@ -359,7 +360,7 @@ IDA Webinar 29/01/2026<br>
     GPLv2
     <img src="Tux.png" width="200"/>
     <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
-      logo by Larry Ewing<sup>3</sup>
+      logo by Larry Ewing<sup>4</sup>
     </figcaption>
   </figure>
 
@@ -367,7 +368,7 @@ IDA Webinar 29/01/2026<br>
     GPLv2
     <img src="git.png" width="200"/>
     <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
-      logo by Jason Long<sup>4</sup>
+      logo by Jason Long<sup>5</sup>
     </figcaption>
   </figure>
 
@@ -375,26 +376,27 @@ IDA Webinar 29/01/2026<br>
     PSFL (GPL-compatible*)
     <img src="Python-logo.png" width="340"/>
     <figcaption style="font-size: 50%; padding-top: 10px; text-align: center;">
-      logo from <sup>5</sup>
+      logo from <sup>6</sup>
     </figcaption>
   </figure>
 </div>
 
 ---
+
 <!--  footer:  <br><br> -->
 
 # Some common misconceptions
 
-- "Free" means I can't make money: *false*.
-  - RedHat: Sells compiled Linux distribution and support contracts.
-  - gmsh (mesher, GPL): Sells license to allow integration into commercial code.
-  - MySQL: Feature complete open-source product + enterprise add-ons.
+- "Free" means I can't make money: <b style="color: red">false</b>.
+  - **RedHat**: Sells compiled Linux distribution and support contracts.
+  - **Gmsh** (mesher, GPL): Sells license to allow integration into commercial code.
+  - **MySQL**: Feature complete open-source product + enterprise add-ons.
 
 ---
 
 # Some common misconceptions (cont.)
 
-- If I use/modify open-source code internally at my company, I must give back my changes: *false*.
+- If I use/modify open-source code internally at my company, I must give back my changes: <b style="color: red">false</b>.
   - "Distribution" means between legal persons.
 
 ---
@@ -402,13 +404,13 @@ IDA Webinar 29/01/2026<br>
 # Some common misconceptions (cont.)
 
 - If I distribute my code and it uses open-source code, then all of my code must be open-source too.
-  - *False* for permissive code - just give credit.
-  - *False* for weakly protected code - open-source obligations restricted to open-source code. 
-  - *False* for most normal uses of strongly protected code, e.g. using Linux, using MySQL, using Firefox.
+  - <i><b style="color: red">False</b></i> for permissive code - just give credit.
+  - <i><b style="color: red">False</b></i> for weakly protected code - open-source obligations restricted to open-source code.
+  - <i><b style="color: red">False</b></i> for most normal uses of strongly protected code, e.g. using <b>Linux</b>, using <b>MySQL</b>, using <b>Firefox</b>.
 
 ---
 
-# Opportunities 
+# Opportunities
 
 ---
 
@@ -416,8 +418,7 @@ IDA Webinar 29/01/2026<br>
 
 - Community-driven features.
 - Rapid prototyping of new full solvers.
-- Research-to-production path: new discretisations, preconditioners, automatic
-  differentiation.
+- Research-to-production path: new discretisations, preconditioners, automatic differentiation.
 
 ---
 
@@ -442,7 +443,7 @@ IDA Webinar 29/01/2026<br>
 
 # Composability and interoperability
 
-- "Unix philosophy" - do one thing and do it well. 
+- "Unix philosophy" - do one thing and do it well.
 - Open data.
 - Open programming interfaces (APIs).
 
@@ -493,34 +494,33 @@ Antonio Svizzero (Founder of UndaBit)
 </figure>
 </div>
 
-
 ---
 
 # Solver performance potential
 
-- Performance of open-source simulation software is *world class*.
+- Performance of open-source simulation software is <b>world class</b>.
 - Scalability, performance and energy-use.
 
 ---
 
 # Permanent magnet synchronous motor
 
-<!--  footer: McDonagh, J., et al. (2022). Modelling a permanent magnet synchronous motor in FEniCSx for parallel high-performance simulations. Finite Elements in Analysis and Design, DOI: <a href=https://doi.org/10.1016/j.finel.2022.103755>10.1016/j.finel.2022.103755</a> . -->
+<!--  footer:  <sup>7</sup> McDonagh, J., et al. (2022). Modelling a permanent magnet synchronous motor in FEniCSx for parallel high-performance simulations. Finite Elements in Analysis and Design, DOI: <a href=https://doi.org/10.1016/j.finel.2022.103755>10.1016/j.finel.2022.103755</a> . -->
 
-<div class=skewed-columns>
+<div class=columns>
 <div>
 <figure style="text-align: center;">
-  <img src="rolls_royce_PMSM.png" width="600" style="max-width: 100%; height: auto;">
+  <img src="rolls_royce_PMSM.png" width="300" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%;">
-    Permanent magnet synchronous motor geometry used to Maxwell's equations
+    Permanent magnet synchronous motor geometry used to Maxwell's equations<sup>7</sup>
   </figcaption>
 </figure>
 </div>
 <div>
 
-<i>"The FEniCSx model showed a 57% greater speedup than the Ansys Maxwell model
+<i style="font-size: 25px"><br>"The FEniCSx model showed a 57% greater speedup than the Ansys Maxwell model
 solved using the distributed solve option and a 16.5 times larger speedup than
-the time decomposition method, at identical core counts".</i><sup>7</sup>
+the time decomposition method, at identical core counts".</i><sup style="font-size: 20px">7</sup>
 
 </div>
 </columns>
@@ -529,7 +529,7 @@ the time decomposition method, at identical core counts".</i><sup>7</sup>
 
 # Limitations
 
-<!-- footer: <br/><br/> --> 
+<!-- footer: <br><br> -->
 
 - Verification/validation burden moves onto you.
 - Knowledge concentration into a few maintainers.
@@ -542,17 +542,17 @@ the time decomposition method, at identical core counts".</i><sup>7</sup>
 # Checklist
 
 - Does the software support the features I need?
-- Is the software verified? Unit tests, examples, published studies. 
+- Is the software verified? Unit tests, examples, published studies.
 - How big/active is the development team?
 - Is the project in good health? Commits, releases.
 - Does the code interoperate with existing workflows?
-   - Hybrid open-source/proprietary.
+  - Hybrid open-source/proprietary.
 - Does the open-source licensing fit my intended use?
-- Is there paid support? Consultancy. 
+- Is there paid support? Consultancy.
 
 ---
 
-# Brief history of the finite element method<sup>1</sup>
+# Brief history of the finite element method<sup>8</sup>
 
 <!-- ![bg width:700px opacity:.2](./Simula_logo.png) -->
 
@@ -570,46 +570,46 @@ $$
 \langle R(x), \phi_i \rangle = 0 \qquad\forall i=1,\cdots,N
 $$
 
-<!--  footer:  <sup>1</sup>Liu, W.K., Li, S. & Park, H.S. Eighty Years of the Finite Element Method: Birth, Evolution, and Future. Arch Computat Methods Eng 29, 4431–4453 (2022). DOI: <a href=https://doi.org/10.1007/s11831-022-09740-9>10.1007/s11831-022-09740-9</a> -->
+<!--  footer:  <sup>8</sup>Liu, W.K., Li, S. & Park, H.S. Eighty Years of the Finite Element Method: Birth, Evolution, and Future. Arch Computat Methods Eng 29, 4431–4453 (2022). DOI: <a href=https://doi.org/10.1007/s11831-022-09740-9>10.1007/s11831-022-09740-9</a> -->
 
 ---
 
 # Brief history of the finite element method
 
-**1940s**: Sparse support Ritz-Galerkin <sup>2</sup> for plates.
+**1940s**: Sparse support Ritz-Galerkin <sup>9</sup> for plates.
 
 <figure style="text-align: center;">
   <img src="courant1943grid.png" width="600" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%; padding-top: 10px;">
-    Figure of the computational grid used in Courant<sup>2</sup> compared with classical Ritz-Galerkin.
+    Figure of the computational grid used in Courant<sup>9</sup> compared with classical Ritz-Galerkin.
   </figcaption>
 </figure>
 <br>
 
-<!--  footer:  <sup>2</sup>Courant, R. (1943). Variational methods for the solution of problems of equilibrium and vibrations. Bulletin of the American Mathematical Society, 49(1), 1-23. -->
+<!--  footer:  <sup>9</sup>Courant, R. (1943). Variational methods for the solution of problems of equilibrium and vibrations. Bulletin of the American Mathematical Society, 49(1), 1-23. -->
 
 ---
 
 # Brief history of the finite element method
 
-**1950s**: The birth of FEM <sup>3</sup> at Boeing
+**1950s**: The birth of FEM <sup>10</sup> at Boeing
 
 **1963**: Symbolic Matrix Interpretive System (FORTRAN, freeware)
 
 <figure style="text-align: center;">
   <img src="first_mesh.png" width="300" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%; padding-top: 10px;">
-    First finite element mesh used for the analysis of gravity dam<sup>4</sup>
+    First finite element mesh used for the analysis of gravity dam<sup>11</sup>
   </figcaption>
 </figure>
-
+<br>
 <br>
 
-<!--  footer: <sup>3</sup>Clough, R. W. (1990). Original formulation of the finite element method. Finite elements in analysis and design, 7(2), 89-101. <br><sup>4</sup>Clough, R. W., & Wilson, E. L. (1999, August). Early finite element research at Berkeley. In Fifth US national conference on computational mechanics (pp. 1-35).-->
+<!--  footer: <sup>10</sup>Clough, R. W. (1990). Original formulation of the finite element method. Finite elements in analysis and design, 7(2), 89-101. <br><sup>11</sup>Clough, R. W., & Wilson, E. L. (1999, August). Early finite element research at Berkeley. In Fifth US national conference on computational mechanics (pp. 1-35).-->
 
 ---
 
-# Brief history of the finite element software 
+# Brief history of the finite element software
 
 <!-- ![bg width:700px opacity:.2](./Simula_logo.png) -->
 
@@ -636,12 +636,12 @@ $$
 </div>
 <div data-marpit-fragment="5">
 
-- **2025**: Market value 6.91 billion USD <sup>5</sup>
-- **2036**: Forecast market value 25.39 billion USD <sup>5</sup>
+- **2025**: Market value 6.91 billion USD <sup>12</sup>
+- **2036**: Forecast market value 25.39 billion USD <sup>12</sup>
 
 </div>
 
-<!--  footer: <sup>5</sup> Research Nester. Finite Element Analysis (FEA) Software Market Outlook. 2026. url: https://www.researchnester.com/reports/finite-element-analysis-software-market/4188. -->
+<!--  footer: <sup>12</sup> Research Nester. Finite Element Analysis (FEA) Software Market Outlook. 2026. url: https://www.researchnester.com/reports/finite-element-analysis-software-market/4188. -->
 
 ---
 
@@ -655,13 +655,13 @@ $$
 
 ### Open-source
 
-- FEniCS (GPL 3.0/LGPL 3.0)
-- Elmer (GPL 2.0)
-- FreeFem (LGPL 3.0)
-- Code_Aster (GPL 3.0)
-- deal.ii (LGPL 2.1 or later)
-- MOOSE (LGPL 2.1)
-- MFEM (BSD 3-Clause License)
+- FEniCS (2003--), LGPL 3.0
+- Elmer (2005--), GPL 2.0
+- FreeFem (1992--), LGPL 3.0
+- Code_Aster (2001--), GPL 3.0
+- deal.ii (2000--), LGPL 2.1 or later
+- MOOSE (2008--), LGPL 2.1
+- MFEM (2010--), BSD 3-Clause License
 - ...
 </div>
 
@@ -695,7 +695,7 @@ $$
 
 <div data-marpit-fragment>
 
-- **2002**: First public version of C++ library. 
+- **2002**: First public version of C++ library.
 - **2003**: FEniCS Project was created.
 - **2005**: First Python interface to C++ library - easier to use.
 - **2008**: Symbolic language + code generation 'mature'.
@@ -715,16 +715,12 @@ $$
 ![bg right:25%](./fenics_logo.png)
 
 <br>
-<div data-marpit-fragment>
-
 
 - **Today**:
   - Used worldwide across academia, SMEs, multinationals.
   - ~12 000 monthly downloads.
   - ~3800 monthly users of help forum.
   - ~1300 citations per year of main papers.
-
-</div>
 
 ---
 
@@ -764,7 +760,7 @@ Garth N. Wells (University of Cambridge)
 <br><img src="fenics_logo.png" width=150px>
 </center>
 
-<!--  footer: $^1$ Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
+<!--  footer: Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
 
 </div>
 
@@ -776,7 +772,7 @@ Garth N. Wells (University of Cambridge)
 - Automatic construction of finite element models.
 - HPC ready.
 
-<!--  footer: $^1$ Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
+<!-- footer: <br> -->
 
 ---
 
@@ -790,8 +786,7 @@ Garth N. Wells (University of Cambridge)
 
 ---
 
-
-# How does it work?<sup>7</sup>
+# How does it work?<sup>13</sup>
 
 <div>
 <figure style="text-align: center;">
@@ -799,11 +794,11 @@ Garth N. Wells (University of Cambridge)
 </figure>
 </div>
 
-<!--  footer: <sup>7</sup> Diagram provided by James Trotter (Simula Research Laboratory) -->
+<!--  footer: <sup>13</sup> Diagram provided by James Trotter (Simula Research Laboratory) -->
 
 ---
 
-# Code generation 
+# Code generation
 
 ```c
 
@@ -830,11 +825,73 @@ static const double FE2_C0_Q39d[1][1][6][6] = {{{{-0.07480380774819603, 0.517632
 }
 ```
 
+<!--  footer: <br><br> -->
+
+---
+
+# Generated code continued (Jacobian)
+
+```c
+// ------------------------
+// Section: Jacobian
+// Inputs: coordinate_dofs, FE1_C1_D01_Q39d, FE1_C0_D10_Q39d
+// Outputs: J_c3, J_c1, J_c2, J_c0
+double J_c0 = 0.0;
+double J_c3 = 0.0;
+double J_c1 = 0.0;
+double J_c2 = 0.0;
+{
+  for (int ic = 0; ic < 3; ++ic)
+  {
+    J_c0 += coordinate_dofs[(ic) * 3] * FE1_C0_D10_Q39d[0][0][0][ic];
+    J_c3 += coordinate_dofs[(ic) * 3 + 1] * FE1_C1_D01_Q39d[0][0][0][ic];
+    J_c1 += coordinate_dofs[(ic) * 3] * FE1_C1_D01_Q39d[0][0][0][ic];
+    J_c2 += coordinate_dofs[(ic) * 3 + 1] * FE1_C0_D10_Q39d[0][0][0][ic];
+  }
+}
+// ------------------------
+double sp_39d_0 = J_c0 * J_c3;
+double sp_39d_1 = J_c1 * J_c2;
+double sp_39d_2 = -sp_39d_1;
+double sp_39d_3 = sp_39d_0 + sp_39d_2;
+double sp_39d_4 = fabs(sp_39d_3);
+```
+
+---
+
+# Generated code continued (local tensor)
+
+```c
+for (int iq = 0; iq < 6; ++iq)
+{
+  // Section: Intermediates
+  double fw0 = 0;
+  {
+    fw0 = sp_39d_4 * weights_39d[iq];
+  }
+  // Section: Tensor Computation
+  // Inputs: FE2_C0_Q39d, fw0
+  // Outputs: A
+  {
+    double temp_0[6] = {0};
+    for (int j = 0; j < 6; ++j)
+    {
+      temp_0[j] = fw0 * FE2_C0_Q39d[0][0][iq][j];
+    }
+    for (int j = 0; j < 6; ++j)
+    {
+      for (int i = 0; i < 6; ++i)
+      {
+        A[6 * (i) + (j)] += FE2_C0_Q39d[0][0][iq][i] * temp_0[j];
+      }
+    }
+  }
+}
+```
+
 ---
 
 # Conclusions
-
-
 
 ---
 
@@ -1723,7 +1780,6 @@ Implemented together with Umberto Zerbinati.<br>
 
 </div>
 </div>
-
 
 ---
 
