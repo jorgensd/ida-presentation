@@ -10,6 +10,8 @@ from mpi4py import MPI
 
 import dolfinx.fem.petsc
 import basix.ufl
+import ufl
+
 # -
 
 # # Loading meshes
@@ -26,14 +28,16 @@ import pyvista
 
 grid = pyvista.UnstructuredGrid(*dolfinx.plot.vtk_mesh(domain))
 plotter = pyvista.Plotter(shape=(1, 2))
-plotter.subplot(0,0)
+plotter.subplot(0, 0)
 plotter.add_mesh(grid, show_edges=True)
 
 # Additionally we add the facet markers
 
-markers = pyvista.UnstructuredGrid(*dolfinx.plot.vtk_mesh(domain, domain.topology.dim-1, facet_tags.indices))
+markers = pyvista.UnstructuredGrid(
+    *dolfinx.plot.vtk_mesh(domain, domain.topology.dim - 1, facet_tags.indices)
+)
 markers.cell_data["markers"] = facet_tags.values
-plotter.subplot(0,1)
+plotter.subplot(0, 1)
 plotter.add_mesh(grid, style="wireframe")
 plotter.add_mesh(markers)
 plotter.link_views()
@@ -60,7 +64,9 @@ with dolfinx.io.XDMFFile(domain.comm, "mesh.xdmf", "w") as xdmf:
 # discretizations.
 
 degree_displacement = 3
-el = basix.ufl.element("Lagrange", domain.basix_cell(), degree_displacement, shape=(domain.geometry.dim, ))
+el = basix.ufl.element(
+    "Lagrange", domain.basix_cell(), degree_displacement, shape=(domain.geometry.dim,)
+)
 V = dolfinx.fem.functionspace(domain, el)
 
 # # The energy functional
@@ -71,9 +77,224 @@ V = dolfinx.fem.functionspace(domain, el)
 #
 # $$ \min_\mathbf{u\in V_g} J(\mathbf{u}) = \frac{1}{2} \int_\Omega \sigma(\mathbf{u}): \epsilon (\mathbf{u})~\mathrm{d}x - \int_\Omega \mathbf{f}\cdot \mathbf{u}~\mathrm{d}x - \int_{\partial\Omega_N}\mathbf{t}\cdot u~\mathrm{d}s$$
 #
-# where $\sigma(\mathbf{u})=2\mu \epsilon(\mathbf{u})$ is the stress, $\epsilon(\mathtbf{u}})= \frac{1}{2}(\nabla \mathbf{u}+(\nabla \mathbf{u})^T) is the infinitesimal strain.
-# $\mathbf{g}$ describes the surface displacement at $\partial\Omega_D$
-#
+# where $\sigma(\mathbf{u})=2\mu \epsilon(\mathbf{u})$ is the stress, $\epsilon(\mathbf{u})= \frac{1}{2}(\nabla \mathbf{u}+(\nabla \mathbf{u})^T)$ is the infinitesimal strain.
+# $\mathbf{g}$ describes the surface displacement at $\partial\Omega_D$.
 #
 
+# We start by defining our unknown $u_h$
 
+uh = dolfinx.fem.Function(V, name="displacement")
+
+# We use the Unified Form Language (UFL) to set up the energy functional
+
+# +
+E_young = dolfinx.fem.Constant(domain, 1.0e5)
+nu = dolfinx.fem.Constant(domain, 0.4)  # Poisson ratio
+
+mu = E_young / (2.0 * (1.0 + nu))
+lmbda = E_young * nu / ((1.0 + nu) * (1.0 - 2.0 * nu))  # Plane strain definition
+lmbda = 2 * mu * lmbda / (lmbda + 2 * mu)  # Plane stress definition
+
+
+def epsilon(u):
+    return ufl.sym(ufl.grad(u))
+
+
+def sigma(u, mu, lmbda):
+    return 2.0 * mu * epsilon(u) + lmbda * ufl.tr(epsilon(u)) * ufl.Identity(len(u))
+
+
+# -
+
+# Next, we define the volumetric part of the energy functional
+
+f = dolfinx.fem.Constant(domain, (0, 0, -9.81))
+J = (
+    0.5 * ufl.inner(sigma(uh, mu, lmbda), epsilon(uh)) * ufl.dx
+    - ufl.inner(f, uh) * ufl.dx
+)
+
+# For the surface traction, we define a restricted integration measure over the exterior facets marked by 59
+
+# +
+
+ds = ufl.Measure("ds", domain=domain, subdomain_data=facet_tags)
+dsN = ds(59)
+
+x = ufl.SpatialCoordinate(domain)
+t = ufl.as_vector((0, 0, -x[0] * x[1]))
+
+J -= ufl.inner(t, uh) * dsN
+# -
+
+# We compute the variation $F=\frac{\partial J}{\partial u}[dv]=0 \quad \forall v \in V$
+
+dv = ufl.TestFunction(V)
+F = ufl.derivative(J, uh, dv)
+
+# # Strong boundary conditions
+
+# Strong boundary conditions, or Dirichlet conditions can be enforced for any degree of freedom (DOF) in
+# the discrete function space. In this example we will fix all degrees of freedom that are connected to
+# the facets marked by `58`.
+
+g = dolfinx.fem.Function(V)
+g.x.array[:] = 0.0
+boundary_dofs = dolfinx.fem.locate_dofs_topological(
+    V, domain.topology.dim - 1, facet_tags.find(58)
+)
+bc = dolfinx.fem.dirichletbc(g, boundary_dofs)
+bcs = [bc]
+
+# To solve the arising (non)-linear problem we use PETSc, which can be configured with
+# state of the art direct and iterative solvers with corresponding preconditioners.
+
+
+petsc_options = {
+    "snes_type": "newtonls",
+    "snes_linesearch_type": "basic",
+    "snes_monitor": None,
+    "snes_error_if_not_converged": True,
+    "ksp_type": "preonly",
+    "pc_type": "lu",
+    "pc_factor_mat_solver_type": "mumps",
+    "ksp_error_if_not_converged": True,
+    "ksp_monitor": None,
+}
+problem = dolfinx.fem.petsc.NonlinearProblem(
+    F, uh, bcs=bcs, petsc_options=petsc_options, petsc_options_prefix="LinearSolver"
+)
+problem.solve()
+
+# We store the solution to a `.bp` file (ADIOS2 binary pack format)
+
+with dolfinx.io.VTXWriter(domain.comm, "u.bp", [uh]) as bp:
+    bp.write(0.0)
+
+# and visualize it with pyvista
+
+result_plotter = pyvista.Plotter(shape=(1, 2))
+result_plotter.subplot(0, 0)
+disp_grid = pyvista.UnstructuredGrid(*dolfinx.plot.vtk_mesh(uh.function_space))
+disp_grid.point_data["uh"] = uh.x.array.reshape(-1, 3)
+result_plotter.add_mesh(disp_grid, style="wireframe")
+result_plotter.subplot(0, 1)
+warped_solution = disp_grid.warp_by_vector("uh")
+result_plotter.add_mesh(warped_solution)
+result_plotter.link_views()
+result_plotter.show()
+
+# ![Displaced tool visualized in Paraview](./tool_with_displacement.png)
+
+# # Postprocessing
+
+# If we want to compute a derived quantity, such as the Von Mises stresses;
+# $\sigma_m=\sqrt{\frac{3}{2}s:s}$ where $s$ is the deviatoric stress tensor
+# $s(u)=\sigma(u)-\frac{1}{3}\mathrm{tr}(\sigma(u))I$.
+
+s = sigma(uh, mu, lmbda) - 1.0 / 3 * ufl.tr(sigma(uh, mu, lmbda)) * ufl.Identity(
+    len(uh)
+)
+von_Mises = ufl.sqrt(3.0 / 2 * ufl.inner(s, s))
+
+# Put stresses and displacement in same space
+
+V_DG = dolfinx.fem.functionspace(
+    domain, ("DG", degree_displacement, (domain.geometry.dim,))
+)
+u_DG = dolfinx.fem.Function(V_DG)
+u_DG.interpolate(uh)
+
+V_von_mises = V_DG.sub(0).collapse()[0]
+stress_expr = dolfinx.fem.Expression(
+    von_Mises, V_von_mises.element.interpolation_points
+)
+stresses = dolfinx.fem.Function(V_von_mises, name="VonMises")
+stresses.interpolate(stress_expr)
+
+with dolfinx.io.VTXWriter(domain.comm, "stresses.bp", [u_DG, stresses]) as bp:
+    bp.write(0.0)
+
+
+stress_grid = pyvista.UnstructuredGrid(*dolfinx.plot.vtk_mesh(V_DG))
+stress_grid.point_data[uh.name] = u_DG.x.array.reshape(-1, 3)
+warped_grid = stress_grid.warp_by_vector()
+warped_grid.point_data[stresses.name] = stresses.x.array
+warped_grid.set_active_scalars(stresses.name)
+stress_plotter = pyvista.Plotter()
+stress_plotter.add_mesh(warped_grid)
+stress_plotter.show()
+
+# # Non-linear functional
+
+# We can set this up for any energy functional, for instance the Saint Venant–Kirchhoff model.
+#
+# $$ J(\mathbf{u}) = \int_\Omega W(\mathbf{u}) ~\mathrm{d}x - \int_\Omega \mathbf{f} \cdot \mathbf{u} ~\mathrm{d}x - \int_\partial\Omega_N \mathbf{t}\cdot \mathbf{u}~\mathrm{d}s $$
+#
+# where
+#
+# $$
+# \begin{align*}
+# W(u) = W(\mathbf{E}(u)) &= \frac{\lambda}{2}\left[\mathrm{tr}(\mathbf{E})\right]^2 + \mu \mathrm{tr}(\mathbf{E}^2)\\
+# \mathbf{E}(\mathbf{u}) &= 0.5 * (\mathbf{C} - \mathbf{I})\\
+# \mathbf{C} &= \mathbf{F}^T \mathbf{F}\\
+# \mathbf{F} &= \mathbf{I} + \nabla \mathbf{u}
+# \end{align*}
+# $$
+
+# This can be easily set up in FEniCS
+
+# + 
+
+I = ufl.Identity(len(uh))
+F = I + ufl.grad(uh)
+C = F.T * F
+E = 0.5 * (C - I)
+
+W = lmbda / 2 * (ufl.tr(E) ** 2 + mu * ufl.tr(E * E))
+J_svk = W * ufl.dx - ufl.inner(f, uh) * ufl.dx - ufl.inner(t, uh) * dsN
+F_svk = ufl.derivative(J_svk, uh, dv)
+
+uh.x.array[:] = 0.0
+problem = dolfinx.fem.petsc.NonlinearProblem(
+    F_svk, uh, bcs=bcs, petsc_options=petsc_options, petsc_options_prefix="SVK_Solver"
+)
+problem.solve()
+
+# -
+
+# We plot and store the solutions as before.
+
+# + 
+
+result_plotter = pyvista.Plotter(shape=(1, 2))
+result_plotter.subplot(0, 0)
+disp_grid = pyvista.UnstructuredGrid(*dolfinx.plot.vtk_mesh(uh.function_space))
+disp_grid.point_data["uh"] = uh.x.array.reshape(-1, 3)
+result_plotter.add_mesh(disp_grid, style="wireframe")
+result_plotter.subplot(0, 1)
+warped_solution = disp_grid.warp_by_vector("uh")
+result_plotter.add_mesh(warped_solution)
+result_plotter.link_views()
+result_plotter.show()
+
+with dolfinx.io.VTXWriter(domain.comm, "u.bp", [uh]) as bp:
+    bp.write(0.0)
+
+# -
+
+# More complex models can also be implemented, such as Mooney-Rivlin
+# Assumptions: (Cauchy stress in terms of strain invariants and deformation tensors)
+#
+# ```python
+# uh = dolfinx.fem.Function(V)
+# I = ufl.Identity(len(uh))
+# F = I + ufl.grad(uh)
+# B = F * F.T # Left Cauchy Green
+# J = ufl.det(F)
+# I1 = ufl.tr(B) # lmbda_i**2
+# I2 = 1/2 * (ufl.tr(B)**2 - ufl.tr(B*B)) 
+# I1b = (J **(-2/3)) * I1
+# I2b = (J **(-4/3)) * I2
+# W = C1 * (I1b - 3) + C2 * (I2b - 3)
+# ```
