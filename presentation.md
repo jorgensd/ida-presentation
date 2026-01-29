@@ -427,7 +427,7 @@ IDA Webinar 29/01/2026<br>
 <figure style="text-align: center;">
   <img src="firon.png" width="1000" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%; padding-top: 10px;">
-    Firon ApS is a Danish startup that uses FEniCS to predict CNC milling vibrations (see: <a href=https://firon.dk>https://firon.dk/</a>)
+    Firon ApS is a Danish startup that uses FEniCS to predict CNC milling vibrations (see: <a href=https://firon.dk>https://firon.dk</a>)
   </figcaption>
 </figure>
 
@@ -438,7 +438,7 @@ IDA Webinar 29/01/2026<br>
 <figure style="text-align: center;">
   <img src="Stellaris-Still_001_White_10k.png" width="800" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%; padding-top: 10px;">
-    Proxima Fusion uses FEniCS to simulate heat transfer in the walls of a stellarators <br>(see: <a href=https://www.proximafusion.com>https://www.proximafusion.com//</a>)<br>
+    Proxima Fusion uses FEniCS to simulate heat transfer in the walls of a stellarators <br>(see: <a href=https://www.proximafusion.com>https://www.proximafusion.com</a>)<br>
     Image courtesy of Proxima Fusion
   </figcaption>
 </figure>
@@ -460,13 +460,15 @@ IDA Webinar 29/01/2026<br>
 
 ---
 
+# Undabit
+
 <div class=skewed-columns>
 
 <div>
 <figure style="text-align: center;">
   <img src="undabit-simulation.png" width="800" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%; padding-top: 10px;">
-    Undabit uses FEniCS for acoustic simulation <br>(see: <a href=https://www.https://undabit.com>https://undabit.com</a>)<br>
+    Undabit uses FEniCS for acoustic simulation <br>(see: <a href=https://undabit.com>https://undabit.com</a>)<br>
     Image courtesy of Antonio Svizzero
   </figcaption>
 </figure>
@@ -1886,6 +1888,3 @@ Options for UMAT-like functionality
 
 https://bleyerj.github.io/comet-fenicsx/
 https://github.com/BAMresearch/fenics-constitutive
-
-Potentially interesting thesis to replicate ansys
-https://wrap.warwick.ac.uk/id/eprint/191715/1/WRAP_Theses_Curtis_2024.pdf
