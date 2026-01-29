@@ -199,7 +199,7 @@ IDA Webinar 29/01/2026<br>
 
 <div data-marpit-fragment>
 
-- **2016-2019:** PhD in Aeronautical Engineering, Imperial College
+- **2009-2013:** PhD in Aeronautical Engineering, Imperial College
 
 </div>
 
@@ -212,7 +212,7 @@ IDA Webinar 29/01/2026<br>
 <div data-marpit-fragment>
 <hr/>
 
-- **Ongoing**: Research lines in scientific computing and mechanics.
+- **Ongoing**: Research in numerical computing with applications in mechanics.
 - **2009**: First introduction to FEniCS Project
 - **2017-today**: Leading management and design of FEniCS Project
 
@@ -226,13 +226,13 @@ IDA Webinar 29/01/2026<br>
 
 - Why this talk?
 - What are "open-source simulation tools"?
-  - Engineering Simulation.
+  - Simulation tools.
   - Open-source.
 - What do open-source simulations enable?
 - What are the constraints and limitations?
 - A (brief) history of finite element methods.
 - A demo of the FEniCS Project.
-- The future.
+- Conclusions:www.
 
 ---
 
@@ -387,10 +387,18 @@ IDA Webinar 29/01/2026<br>
 
 # Some common misconceptions
 
-- "Free" means I can't make money: <b style="color: red">false</b>.
+- "Free" means I can't sell software or make money: <b style="color: red">false</b>.
   - **RedHat**: Sells compiled Linux distribution and support contracts.
-  - **Gmsh** (mesher, GPL): Sells license to allow integration into commercial code.
+  - **Gmsh** (mesher, GPL): Sells proprietary license to allow integration into commercial code.
   - **MySQL**: Feature complete open-source product + enterprise add-ons.
+
+---
+
+# Some common misconceptions (cont.)
+
+- "Free" I won't need to pay any money for simulation support: <b style="color: red">false</b>.
+  - Unless you are an expert in simulation software, or have a large in-house
+    team, you may well still need a support contract or integration work.
 
 ---
 
@@ -453,6 +461,7 @@ IDA Webinar 29/01/2026<br>
 
 ---
 
+<<<<<<< Updated upstream
 # Reproducibility and transparency
 
 - Inspect algorithms, verify assumptions, audit numerics.
@@ -463,7 +472,6 @@ IDA Webinar 29/01/2026<br>
 # Undabit
 
 <div class=skewed-columns>
-
 <div>
 <figure style="text-align: center;">
   <img src="undabit-simulation.png" width="800" style="max-width: 100%; height: auto;">
@@ -481,13 +489,27 @@ IDA Webinar 29/01/2026<br>
 Antonio Svizzero (Founder of UndaBit)
 
 </div>
+</div>
+
+---
+
+# Reproducibility and transparency
+
+- Inspect algorithms, verify assumptions, audit numerics.
+- Build reproducible pipelines.
+
+---
+
+
+
 
 ---
 
 # Cost and access
 
 - Low barrier for entry, academia, SMEs and global collaboration.
-- Avoid vendor lock-in; long-term maintainability.
+- Parametric job and HPC-friendly licensing.
+- Avoid vendor lock-in.
 
 ---
 
@@ -502,7 +524,7 @@ Antonio Svizzero (Founder of UndaBit)
 
 ---
 
-# Solver performance potential
+# Solver performance
 
 <div class=right-skewed-columns>
 <div>
@@ -556,9 +578,9 @@ the time decomposition method, at identical core counts".</i><sup style="font-si
 
 <!-- footer: <br><br> -->
 
-- Verification/validation burden moves onto you.
-- Knowledge concentration into a few maintainers.
-- Fragmentation.
+- Verification/validation burden moves downstream.
+- Knowledge concentration into a few maintainers (bus factor).
+- Fragmentation across ecosystem.
 - License compatibility (GPL).
 - Support and liability.
 
@@ -574,6 +596,10 @@ the time decomposition method, at identical core counts".</i><sup style="font-si
   - Hybrid open-source/proprietary.
 - Does the open-source licensing fit my intended use?
 - Is there paid support? Consultancy.
+
+---
+
+# Finite elements and FEniCS 
 
 ---
 
@@ -709,6 +735,7 @@ $$
 
 # How does FEniCS fit into this landscape?
 
+- Geometry/CAD → Mesh → **Simulation** → Postprocessing → Reporting.
 - Open source (multiple providers) e.g.:
   - FreeCAD/OpenCascade → Gmsh → **FEniCS** → Paraview → Custom.
 
@@ -918,12 +945,22 @@ for (int iq = 0; iq < 6; ++iq)
 
 # Conclusions
 
+- The overall market for simulation is still growing.
+- Increasing demands: complexity, transparency, hardware, budgets.
+- Open-source simulation software has improved enormously:
+   - Ease-of-use.
+   - Integration.
+- And is world-leading in terms of performance and flexibility.
+- Provides unique opportunities (and some drawbacks).
+- Proprietary/open-source and fully open-source simulation workflows
+
+---
 <center>
 <div style="font-size:30px">
 <br>
 If you want to get in touch<br>
 <a href="mailto:dokken@simula.no">dokken@simula.no</a><br>
-<a href="mailto:mail@jackhale.co.uk">mail@jackhale.co.uk</a><br>
+<a href="mailto:jack.hale@uni.lu">jack.hale@uni.lu</a><br>
 <a href="https://fenicsproject.discourse.group/">https://fenicsproject.discourse.group/</a><br>
 </div>
 <center/>
