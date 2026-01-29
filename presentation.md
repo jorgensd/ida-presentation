@@ -1846,10 +1846,6 @@ Jacobian = ufl.derivative(F, uh, du)
 
 ---
 
-<!--  footer:  <br><br> -->
-
----
-
 <!--  footer: <br> -->
 
 Options for UMAT-like functionality
@@ -1859,5 +1855,3 @@ https://github.com/BAMresearch/fenics-constitutive
 
 Potentially interesting thesis to replicate ansys
 https://wrap.warwick.ac.uk/id/eprint/191715/1/WRAP_Theses_Curtis_2024.pdf
-
----
