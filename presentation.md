@@ -1253,8 +1253,8 @@ omega_sub, sub_to_omega = dolfinx.mesh.create_submesh(omega, dim, tags.find(tag)
 
 <div style="font-size:25px">
 <center>
-<img src="./contact2D_volume.png" height=250px>
-<img src="./contact2D_surface.png" height=250px>
+<img src="./backup-figures/contact2D_volume.png" height=250px>
+<img src="./backup-figures/contact2D_surface.png" height=250px>
 <br>
 <sup></sup><a href="https://jsdokken.com/FEniCS-workshop/src/multiphysics/coupling.html">https://jsdokken.com/FEniCS-workshop/src/multiphysics/coupling.html</a>
 </center>
@@ -1324,8 +1324,8 @@ $$
 <br>
 <br>
 <center>
-<img src="./emi_sketch.png" width=450px>
-<sup>3</sup>Benedusi et al. 2024 <br>&nbsp; DOI: <a href="https://doi.org/10.1007/s10915-023-02449-2">10.1007/s10915-023-02449-2</a>
+<img src="./backup-figures/emi_sketch.png" width=450px>
+<sup>16</sup>Benedusi et al. 2024 <br>&nbsp; DOI: <a href="https://doi.org/10.1007/s10915-023-02449-2">10.1007/s10915-023-02449-2</a>
 </center>
 </div>
 
@@ -1333,10 +1333,10 @@ $$
 
 ---
 
-<!-- footer: $^4$Kutcha et al. (2021), Solving the EMI Equations using Finite Element Methods, In: Modeling Excitable Tissue. Simula SpringerBriefs on Computing, DOI: [10.1007/978-3-030-61157-6_5](https://doi.org/10.1007/978-3-030-61157-6_5)<br><br>
+<!-- footer: <sup>17</sup>Kutcha et al. (2021), Solving the EMI Equations using Finite Element Methods, In: Modeling Excitable Tissue. Simula SpringerBriefs on Computing, DOI: [10.1007/978-3-030-61157-6_5](https://doi.org/10.1007/978-3-030-61157-6_5)<br><br>
 -->
 
-# Various ways of modelling this equation$^4$
+# Various ways of modelling this equation<sup>17</sup>
 
 - Single-dimensional primal form
 - Multi-dimensional primal form
@@ -1377,7 +1377,7 @@ for all $v_e \in V_e$ and $v_i \in V_i$.
 
 ---
 
-# Use known preconditioner$^5$ of this problem
+# Use known preconditioner<sup>18</sup> of this problem
 
 $$
 \begin{pmatrix}
@@ -1396,7 +1396,7 @@ B = dolfinx.fem.petsc.assemble_matrix(P_compiled, kind="mpi", bcs=[bc_P])
 B.assemble()
 ```
 
-<!-- footer: $^5$Kutcha and Mardal. (2021), Iterative Solvers for EMI Models, In: Modeling Excitable Tissue. Simula SpringerBriefs on Computing, DOI: [10.1007/978-3-030-61157-6_6](https://doi.org/10.1007/978-3-030-61157-6_6)<br><br>
+<!-- footer: <sup>18</sup>Kutcha and Mardal. (2021), Iterative Solvers for EMI Models, In: Modeling Excitable Tissue. Simula SpringerBriefs on Computing, DOI: [10.1007/978-3-030-61157-6_6](https://doi.org/10.1007/978-3-030-61157-6_6)<br><br>
 -->
 
 ---
@@ -1421,7 +1421,7 @@ $$
 </div>
 <div>
 <center>
-<img src="./emi_figure.png" height=550px>
+<img src="./backup-figures/emi_figure.png" height=550px>
 </center>
 </div>
 
@@ -1438,12 +1438,12 @@ $$
 <div class=columns>
 <div data-marpit-fragment>
 <center>
-<img src="./timing_1.png" height=350px>
+<img src="./backup-figures/timing_1.png" height=350px>
 </center>
 </div>
 <div data-marpit-fragment>
 <center>
-<img src="./timing_processes_1.png" height=350px>
+<img src="./backup-figures/timing_processes_1.png" height=350px>
 </center>
 </div>
 
@@ -1460,21 +1460,21 @@ $$
 <div class=columns>
 <div>
 <center>
-<img src="./timing_5.png" height=350px>
+<img src="./backup-figures/timing_5.png" height=350px>
 </center>
 </div>
 <div data-marpit-fragment>
 <center>
-<img src="./timing_processes_5.png" height=350px>
+<img src="./backup-figures/timing_processes_5.png" height=350px>
 </center>
 </div>
 
 ---
 
-<!-- footer: $^6$ Dean, J.P, _Mathematical and computational aspects of solving mixed-domain problems using the finite element method_, PhD Thesis, DOI: 10.17863/CAM.108292<br> ${}^7$ Dean, Dokken, Wells, _Parallel algorithms for mixed-domain problems_, In preparation<br><br>
+<!-- footer: <sup>19</sup> Dean, J.P, _Mathematical and computational aspects of solving mixed-domain problems using the finite element method_, PhD Thesis, DOI: 10.17863/CAM.108292<br> <sup>20</sup> Dean, Dokken, Wells, _Parallel algorithms for mixed-domain problems_, In preparation<br><br>
 -->
 
-# Mixed-dimensional support$^{6,7}$
+# Mixed-dimensional support<sup>19,20</sup>
 
 - Native support for:
   - Codim 0: 1D-1D, 2D-2D, 3D-3D
@@ -1485,7 +1485,7 @@ $$
 
 ---
 
-# Always aiming to be scalable$^{6,7}$
+# Always aiming to be scalable<sup>19,20</sup>
 
 <div class="right-skewed-columns">
 <div>
@@ -1502,14 +1502,15 @@ $$
 </div>
 <div>
 <center>
-<img src="./weak_scaling_dean.png" width=700>
+<img src="./backup-figures/weak_scaling_dean.png" width=700>
 </center>
 </div>
 </div>
+<br>
 
 ---
 
-<!--  footer: $^8$ Dokken, Farrell, Keith, Papadopoulos, Surowiec, _The latent variable proximal point algorithm for variational problems with inequality constraints_, CMAME, 2025, DOI: [10.1016/j.cma.2025.118181](https://doi.org/10.1016/j.cma.2025.118181) <br><br> -->
+<!--  footer: <sup>21</sup> Dokken, Farrell, Keith, Papadopoulos, Surowiec, _The latent variable proximal point algorithm for variational problems with inequality constraints_, CMAME, 2025, DOI: [10.1016/j.cma.2025.118181](https://doi.org/10.1016/j.cma.2025.118181) <br><br> -->
 
 # The Signorini problem
 
@@ -1555,9 +1556,9 @@ $$
 
 ---
 
-# Latent variable proximal point algorithm$^8$
+# Latent variable proximal point algorithm<sup>21</sup>
 
-<!--  footer: $^8$ Dokken, Farrell, Keith, Papadopoulos, Surowiec, _The latent variable proximal point algorithm for variational problems with inequality constraints_, CMAME, 2025, DOI: [10.1016/j.cma.2025.118181](https://doi.org/10.1016/j.cma.2025.118181) <br><br> -->
+<!--  footer: <sup>21</sup> Dokken, Farrell, Keith, Papadopoulos, Surowiec, _The latent variable proximal point algorithm for variational problems with inequality constraints_, CMAME, 2025, DOI: [10.1016/j.cma.2025.118181](https://doi.org/10.1016/j.cma.2025.118181) <br><br> -->
 
 $$
 \begin{align*}
@@ -1597,14 +1598,14 @@ where $\text{dom}R=C$, $(\nabla R)^*$ is the convex conjugate, $B^*$ the dual co
 <div>
 
 <center>
-<img src="./lvpp_table.png" width=700>
+<img src="./backup-figures/lvpp_table.png" width=700>
 </center>
 
 </div>
 
 ---
 
-# Latent variable proximal point algorithm$^8$
+# Latent variable proximal point algorithm<sup>21</sup>
 
 <div>
 
@@ -1631,7 +1632,7 @@ Given $\alpha_k$, $\psi_{k-1}$
 
 ---
 
-# Implementation of the Signorini problem ${}^8$
+# Implementation of the Signorini problem <sup>21</sup>
 
 ```python
 fdim = omega.topology.dim -1
@@ -1652,7 +1653,7 @@ alpha = dolfinx.fem.Constant(omega, 1.)
 
 ---
 
-# Implementation of the Signorini problem ${}^8$
+# Implementation of the Signorini problem <sup>21</sup>
 
 ```python
 def epsilon(w):
@@ -1675,30 +1676,30 @@ bc = dolfinx.fem.dirichletbc(u_bc, dolfinx.fem.locate_dofs_topological(V, fdim, 
 
 ---
 
-# Implementation of the Signorini problem ${}^8$
+# Implementation of the Signorini problem <sup>21</sup>
 
 <center>
-<img src="./signorini.png" width=850>
+<img src="./backup-figures/signorini.png" width=850>
 </center>
 
 ---
 
-<!--  footer: ${}^9$ Kuchta, M. (2021). Assembly of Multiscale Linear PDE Operators. In: Vermolen, F.J., Vuik, C. (eds) Numerical Mathematics and Advanced Applications ENUMATH 2019. Lecture Notes in Computational Science and Engineering, vol 139. Springer, Cham. https://doi.org/10.1007/978-3-030-55874-1_63 <br><br> -->
+<!--  footer: <sup>22</sup> Kuchta, M. (2021). Assembly of Multiscale Linear PDE Operators. In: Vermolen, F.J., Vuik, C. (eds) Numerical Mathematics and Advanced Applications ENUMATH 2019. Lecture Notes in Computational Science and Engineering, vol 139. Springer, Cham. DOI: <a href=https://doi.org/10.1007/978-3-030-55874-1_63>10.1007/978-3-030-55874-1_63</a>  -->
 
 # Non-conforming 3D-1D support using FEniCSx_ii
 
-- Algorithm based on ${}^9$, but with MPI support and FEniCSx support
+- Algorithm based on <sup>22</sup>, but with MPI support and FEniCSx support
 - Example below from [FEniCSx_ii Demos](https://scientificcomputing.github.io/fenicsx_ii/demos/coupled_poisson_solver.html)
 
 <div class=columns>
 <div>
 
 <center>
-<img src="./xii.png" width=500>
+<img src="./backup-figures/xii.png" width=500>
 </center>
 </div>
 <center>
-<img src="./xii_solution.png" width=300>
+<img src="./backup-figures/xii_solution.png" width=300>
 </center>
 </div>
 <br>
@@ -1706,7 +1707,7 @@ bc = dolfinx.fem.dirichletbc(u_bc, dolfinx.fem.locate_dofs_topological(V, fdim, 
 
 ---
 
-<!--  footer: ${}^{10}$ Idea presented in: Gjerde IG (2022) Graphnics: Combining FEniCS and NetworkX to simulate flow in complex networks. arXiv preprint arXiv:2212.02916 <br> ${}^{11}$ Daversin-Catty, C., et al (2024). Finite Element Software and Performance for Network Models with Multipliers. SEMA SIMAI Springer Series, vol 36. Springer, Cham. DOI: 10.1007/978-3-031-58519-7_4 <br> -->
+<!--  footer: <sup>23</sup> Idea presented in: Gjerde IG (2022) Graphnics: Combining FEniCS and NetworkX to simulate flow in complex networks. arXiv preprint arXiv:2212.02916 <br> <sup>24</sup> Daversin-Catty, C., et al (2024). Finite Element Software and Performance for Network Models with Multipliers. SEMA SIMAI Springer Series, vol 36. Springer, Cham. DOI: <a href=https://doi.org/10.1007/978-3-031-58519-7_4>10.1007/978-3-031-58519-7_4</a> <br> -->
 
 # Support for branching manifolds with MPI
 
@@ -1714,12 +1715,12 @@ bc = dolfinx.fem.dirichletbc(u_bc, dolfinx.fem.locate_dofs_topological(V, fdim, 
 
 <div>
 
-- Represent Network-x graphs as meshes in DOLFINx${}^{10}$
-- Use 1D submeshes with graph coloring${}^{11}$
+- Represent Network-x graphs as meshes in DOLFINx<sup>23</sup>
+- Use 1D submeshes with graph colorin<sup>24</sup>
 - _New_: MPI support and 0D submeshes for bifurcations
 
 </div>
-<img src="hydraulic_tree.png" width=600>
+<img src="backup-figures/hydraulic_tree.png" width=600>
 </div>
 </div>
 
@@ -1746,7 +1747,7 @@ $$
 
 </div>
 <div>
-<img src="./fenics_logo_dg.png" width=650px>
+<img src="./backup-figures/fenics_logo_dg.png" width=650px>
 </div>
 
 ---
@@ -1755,7 +1756,7 @@ $$
 
 <div style="font-size:20px">
 <center>
-<img src="./amr.gif" width=570px>
+<img src="./backup-figures/amr.gif" width=570px>
 <br>
 Implemented together with Umberto Zerbinati.<br>
 <a href="https://jsdokken.com/dolfinx-tutorial/chapter2/amr.html">https://jsdokken.com/dolfinx-tutorial/chapter2/amr.html</a>
@@ -1765,7 +1766,7 @@ Implemented together with Umberto Zerbinati.<br>
 
 ---
 
-<!-- footer: ${}^{12}$ Dark, Delaporte, Dokken et al. "FESTIM v2.0: Upgraded framework for multi-species hydrogen transport and enhanced performance." arXiv preprint arXiv:2509.24760 (2025). <br> ${}^{13}$Řehoř, M. and Hale, J.S. _FEniCSx-pctools: Tools for PETSc Block Linear Algebra Preconditioning in FEniCSx_, JORS, DOI: 10.5334/jors.494 (2025)<br><br> -->
+<!-- footer: <sup>25</sup> Dark, Delaporte, Dokken et al. "FESTIM v2.0: Upgraded framework for multi-species hydrogen transport and enhanced performance." arXiv preprint arXiv:2509.24760 (2025). <br> <sup>26</sup>Řehoř, M. and Hale, J.S. _FEniCSx-pctools: Tools for PETSc Block Linear Algebra Preconditioning in FEniCSx_, JORS, DOI: 10.5334/jors.494 (2025)<br><br> -->
 
 # Conclusion
 
@@ -1774,11 +1775,11 @@ Implemented together with Umberto Zerbinati.<br>
 
 - Mixed-domain support
   - codim 0, 1, 2
-- Scalability${^{12}}$
-- Modularity for custom preconditioning${^{13}}$
+- Scalability<sup>25</sup>
+- Modularity for custom preconditioning<sup>26</sup>
 </div>
 <div>
-<img src="festim2.png" width=600>
+<img src="backup-figures/festim2.png" width=600>
 
 </div>
 </div>
@@ -1846,19 +1847,6 @@ Jacobian = ufl.derivative(F, uh, du)
 ---
 
 <!--  footer:  <br><br> -->
-
-# Does companies use FEnICS at the moment?
-
-- Rafinex (Jack), closed source GUI https://www.youtube.com/watch?v=INtwTI8HFRM
-- Turbostream CFD (Jørgen)
-- Feather https://feather.solutions/ (I've asked feather for a quote)
-
----
-
-- Explain difference between FEniCS terminology and the commercial terminology
-
-- Scalability - Performance tests
-- Control
 
 ---
 
