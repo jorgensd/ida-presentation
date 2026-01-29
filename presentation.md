@@ -714,7 +714,7 @@ $$
 
 ![bg right:25%](./fenics_logo.png)
 
-<br>
+<div data-marpit-fragment>
 
 - **Today**:
   - Used worldwide across academia, SMEs, multinationals.
