@@ -271,7 +271,7 @@ IDA Webinar 29/01/2026<br>
 <figure style="text-align: center;">
   <img src="Plasticity.jpg" width="450" style="max-width: 100%; height: auto;"/>
   <figcaption style="font-size: 50%; padding-top: 10px;">
-    Rafinex, cloud-based, uses open-source internally.
+    Rafinex, cloud-based proprietary, uses open-source.
   </figcaption>
 </figure>
 
@@ -484,7 +484,7 @@ Show example of collaborative academic project
 
 ---
 
-# Performance potential
+# Solver performance potential
 
 - Modern open-source simulation software is *world class*.
 - Scalability, performance, energy-use.
