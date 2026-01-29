@@ -760,7 +760,7 @@ Garth N. Wells (University of Cambridge)
 <br><img src="fenics_logo.png" width=150px>
 </center>
 
-<!--  footer: Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
+<!--  footer: Baratta, Dean, Dokken, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
 
 </div>
 
@@ -901,11 +901,11 @@ for (int iq = 0; iq < 6; ++iq)
 
 # How does it work?
 
-### Package overview${^1}$
+### Package overview
 
-![bg contain right:53%](./overview.png)
+![bg contain right:53%](./backup-figures/overview.png)
 
-<!--  footer: <br> -->
+<!-- footer: <br> -->
 
 # UFL + Basix = Variational forms
 
@@ -924,9 +924,11 @@ V = ufl.FunctionSpace(domain, el)
 ---
 
 <center>
-<img src="supported_elements.png" width=960>
-<br>DOI: <a href="https://doi.org/10.5281/zenodo.10447665">10.5281/zenodo.10447665</a>
+<img src="backup-figures/supported_elements.png" width=960>
+<br>Table from <sup>14</sup></a>
 <center/>
+
+<!--  footer: <sup>14</sup> Baratta, Dean, Dokken, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
 
 ---
 
@@ -1055,7 +1057,7 @@ python3 -m ffcx script.py
 ```
 
 </div>
-<iframe width="500" height="300" src="S.pdf", title="Computational graph of a mass matrix"></iframe>
+<iframe width="500" height="300" src="backup-figures/S.pdf", title="Computational graph of a mass matrix"></iframe>
 </div>
 
 ---
@@ -1157,9 +1159,9 @@ for (int iq = 0; iq < 6; ++iq)
 
 # How does it work?
 
-<!--  footer: $^1$ Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
+<!--  footer: <sup>15</sup> Baratta, Dean, Dokken, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
 
-### Modularity${^1}$
+### Modularity<sup>15</sup>
 
 ![bg contain right:53%](./workflow.png)
 
@@ -1232,7 +1234,7 @@ solver.solve()
 </p>
 </div>
 <center>
-<img src="./uh_DG.png" height=550px>
+<img src="./backup-figures/uh_DG.png" height=550px>
 </center>
 </div>
 
@@ -1469,7 +1471,7 @@ $$
 
 ---
 
-<!-- footer: $^6$ Dean, J.P, _Mathematical and computational aspects of solving mixed-domain problems using the finite element method_, PhD Thesis, DOI: 10.17863/CAM.108292<br> ${}^7$ Dean, <b>Dokken</b>, Wells, _Parallel algorithms for mixed-domain problems_, In preparation<br><br>
+<!-- footer: $^6$ Dean, J.P, _Mathematical and computational aspects of solving mixed-domain problems using the finite element method_, PhD Thesis, DOI: 10.17863/CAM.108292<br> ${}^7$ Dean, Dokken, Wells, _Parallel algorithms for mixed-domain problems_, In preparation<br><br>
 -->
 
 # Mixed-dimensional support$^{6,7}$
@@ -1507,7 +1509,7 @@ $$
 
 ---
 
-<!--  footer: $^8$ <b>Dokken</b>, Farrell, Keith, Papadopoulos, Surowiec, _The latent variable proximal point algorithm for variational problems with inequality constraints_, CMAME, 2025, DOI: [10.1016/j.cma.2025.118181](https://doi.org/10.1016/j.cma.2025.118181) <br><br> -->
+<!--  footer: $^8$ Dokken, Farrell, Keith, Papadopoulos, Surowiec, _The latent variable proximal point algorithm for variational problems with inequality constraints_, CMAME, 2025, DOI: [10.1016/j.cma.2025.118181](https://doi.org/10.1016/j.cma.2025.118181) <br><br> -->
 
 # The Signorini problem
 
@@ -1555,7 +1557,7 @@ $$
 
 # Latent variable proximal point algorithm$^8$
 
-<!--  footer: $^8$ <b>Dokken</b>, Farrell, Keith, Papadopoulos, Surowiec, _The latent variable proximal point algorithm for variational problems with inequality constraints_, CMAME, 2025, DOI: [10.1016/j.cma.2025.118181](https://doi.org/10.1016/j.cma.2025.118181) <br><br> -->
+<!--  footer: $^8$ Dokken, Farrell, Keith, Papadopoulos, Surowiec, _The latent variable proximal point algorithm for variational problems with inequality constraints_, CMAME, 2025, DOI: [10.1016/j.cma.2025.118181](https://doi.org/10.1016/j.cma.2025.118181) <br><br> -->
 
 $$
 \begin{align*}
@@ -1763,7 +1765,7 @@ Implemented together with Umberto Zerbinati.<br>
 
 ---
 
-<!-- footer: ${}^{12}$ Dark, Delaporte, <b>Dokken</b> et al. "FESTIM v2.0: Upgraded framework for multi-species hydrogen transport and enhanced performance." arXiv preprint arXiv:2509.24760 (2025). <br> ${}^{13}$Řehoř, M. and Hale, J.S. _FEniCSx-pctools: Tools for PETSc Block Linear Algebra Preconditioning in FEniCSx_, JORS, DOI: 10.5334/jors.494 (2025)<br><br> -->
+<!-- footer: ${}^{12}$ Dark, Delaporte, Dokken et al. "FESTIM v2.0: Upgraded framework for multi-species hydrogen transport and enhanced performance." arXiv preprint arXiv:2509.24760 (2025). <br> ${}^{13}$Řehoř, M. and Hale, J.S. _FEniCSx-pctools: Tools for PETSc Block Linear Algebra Preconditioning in FEniCSx_, JORS, DOI: 10.5334/jors.494 (2025)<br><br> -->
 
 # Conclusion
 
