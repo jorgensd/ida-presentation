@@ -262,22 +262,6 @@ IDA Webinar 29/01/2026<br>
 
 <!-- footer: By Joël Cugnoni - http://www.caelinux.com, GPL, https://commons.wikimedia.org/w/index.php?curid=3893245 -->
 
----
-
-# Engineering Simulation Workflow
-
-- Geometry/CAD → Mesh → Simulation → Postprocessing → Reporting. 
-
-<figure style="text-align: center;">
-  <img src="Plasticity.jpg" width="450" style="max-width: 100%; height: auto;"/>
-  <figcaption style="font-size: 50%; padding-top: 10px;">
-    Rafinex, cloud-based proprietary, uses open-source.
-  </figcaption>
-</figure>
-
-<!-- footer: Rafinex Sarl, http://rafinex.com -->
-
----
 
 # Engineering Simulation Workflow (cont.)
 
@@ -285,7 +269,7 @@ IDA Webinar 29/01/2026<br>
 - Proprietary (Dassault Simulia):
   - Catia V5 → Abaqus pre-processing → Abaqus/Standard → Abaqus postprocessing → Custom.
 - Open source (multiple providers):
-  - OpenCascade → Gmsh → FEniCS → Paraview → Custom.  
+  - FreeCAD/OpenCascade → Gmsh → FEniCS → Paraview → Custom.  
 
 ---
 
@@ -340,7 +324,7 @@ IDA Webinar 29/01/2026<br>
 
 <!--  footer: <br/><br/> -->
 
-# Open-source license models
+# Open-source license models (simplified)
 
 - **Permissive:** Do what you want, just make sure I get credit (US Universities, Apple open-source, Microsoft open-source).
 - **Weakly protective**: If you make changes to my code, the new work must also be weakly protected. Your code remains yours (FEniCS, FFmpeg, GMP).  
@@ -572,7 +556,7 @@ $$
 
 ---
 
-# Brief history of the finite element method
+# Brief history of the finite element software 
 
 <!-- ![bg width:700px opacity:.2](./Simula_logo.png) -->
 
@@ -588,13 +572,13 @@ $$
 </div>
 <div data-marpit-fragment="3">
 
-- **2000s**: User-friendliness (Python API: FEniCS)
+- **2000s**: User-friendliness, automatic code generation (FEniCS, Firedrake)
 
 </div>
 
 <div data-marpit-fragment="4">
 
-- **2010s**: High performance computing and hybrid architectures (MFEM)
+- **2010s**: High performance computing and hybrid architectures (MFEM, and above)
 
 </div>
 <div data-marpit-fragment="5">
@@ -655,22 +639,27 @@ $$
 
 <div data-marpit-fragment>
 
-- **2002**: First public version of a C++ library (DOLFIN)
-- **2003**: FEniCS project was created
+- **2002**: First public version of C++ library (DOLFIN)
+- **2003**: FEniCS Project was created
 - **2005**: First Python interface (PyDOLFIN)
+- **2008**: Symbolic language + code generation 'ready'.
 
 </div>
 <div data-marpit-fragment>
 
 - **2009**: Initial MPI support
+- **2017**: Bottom up re-write: pre-exascale HPC (FEniCSx).
+
 </div>
 
 <br>
 <div data-marpit-fragment>
 
-~3800 users on the FEniCS Discourse forum
-~12 000 monthly downloads
-License: LGPL 3 or later
+- **Today**:
+  - ~12 000 monthly downloads
+  - ~3800 monthly users of help forum
+  - ~1300 citations of main papers per year
+  - Academia > Startups > SMEs > Multinationals
 
 </div>
 
@@ -680,8 +669,9 @@ License: LGPL 3 or later
 
 ![bg right:40%](./fenics_logo.png)
 
-# FEniCS Steering council
+# FEniCS Steering Council
 
+Formalised governance.
 <font size="6">
 
 Francesco Ballarin (Università Cattolica del Sacro Cuore)
