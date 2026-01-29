@@ -224,16 +224,15 @@ IDA Webinar 29/01/2026<br>
 
 # Outline
 
-- Why this talk and why should you be interested?
+- Why this talk?
 - What are "open-source simulation tools"?
-  - Engineering Simulation
-  - Open-source
+  - Engineering Simulation.
+  - Open-source.
 - What do open-source simulations enable?
-- Who are they aimed at?
 - What are the constraints and limitations?
-- Case studies
-- A demo of the FEniCS Project
-- The future
+- A (brief) history of finite element methods.
+- A demo of the FEniCS Project.
+- The future.
 
 ---
 
@@ -243,9 +242,9 @@ IDA Webinar 29/01/2026<br>
 - Demands from industry and academia are forcing change:
   - Diversity, complexity, uncertainty.
   - Reproducibility, transparency, auditability.
-  - Novel computing hardware.
+  - Novel computing hardware - "AI".
   - Budget constraints.
-- Proprietary, open-source and hybrid licensed software will respond.
+- Proprietary, open-source and "hybrid" simulation software will respond.
 
 ---
 
@@ -262,14 +261,17 @@ IDA Webinar 29/01/2026<br>
 
 <!-- footer: By Joël Cugnoni - http://www.caelinux.com, GPL, https://commons.wikimedia.org/w/index.php?curid=3893245 -->
 
+---
 
 # Engineering Simulation Workflow (cont.)
 
 - Geometry/CAD → Mesh → Simulation → Postprocessing → Reporting. 
-- Proprietary (Dassault Simulia):
+- Proprietary integrated (Dassault Simulia) e.g.:
   - Catia V5 → Abaqus pre-processing → Abaqus/Standard → Abaqus postprocessing → Custom.
-- Open source (multiple providers):
-  - FreeCAD/OpenCascade → Gmsh → FEniCS → Paraview → Custom.  
+- Open-source interoperable e.g.:
+  - FreeCAD/OpenCascade → Gmsh → **FEniCS** → Paraview → Custom.  
+- Open-source integrated e.g.:
+  - Salome FEA, agros, FreeCAD, Elmer.
 
 ---
 
@@ -453,7 +455,25 @@ IDA Webinar 29/01/2026<br>
 
 ---
 
-Safety critical project - nuclear energy
+<div class=skewed-columns>
+
+<div>
+<figure style="text-align: center;">
+  <img src="undabit-simulation.png" width="800" style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+    Undabit uses FEniCS for acoustic simulation <br>(see: <a href=https://www.https://undabit.com>https://undabit.com</a>)<br>
+    Image courtesy of Antonio Svizzero
+  </figcaption>
+</figure>
+</div>
+<div  style="font-size: 20px">
+<br><br><br>
+<em  style="font-size: 20px">
+"As a former user of commercial software I often felt limited by their 'black box' architecture. FEniCS gives Undabit direct access to manipulate the governing equations and system matrices. This flexibility allows us to build custom tools and solve rigorous engineering challenges for real-world industrial applications that commercial software simply cannot match."
+</em>
+Antonio Svizzero (Founder of UndaBit)
+
+</div>
 
 ---
 
@@ -464,18 +484,26 @@ Safety critical project - nuclear energy
 
 ---
 
-Show example of collaborative academic project
+<div>
+<figure style="text-align: center;">
+  <img src="weather.jpg" width="800" style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+  Global issues: Global weather models, NSF/NCAR Weather Research and Forecasting Model. 
+  </figcaption>
+</figure>
+</div>
+
 
 ---
 
 # Solver performance potential
 
-- Modern open-source simulation software is *world class*.
-- Scalability, performance, energy-use.
+- Performance of open-source simulation software is *world class*.
+- Scalability, performance and energy-use.
 
 ---
 
-# Rolls-Royce
+# Permanent magnet synchronous motor
 
 <!--  footer: McDonagh, J., et al. (2022). Modelling a permanent magnet synchronous motor in FEniCSx for parallel high-performance simulations. Finite Elements in Analysis and Design, DOI: <a href=https://doi.org/10.1016/j.finel.2022.103755>10.1016/j.finel.2022.103755</a> . -->
 
@@ -484,18 +512,28 @@ Show example of collaborative academic project
 <figure style="text-align: center;">
   <img src="rolls_royce_PMSM.png" width="600" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%;">
-    Permanent magnet synchronous motor (PMSM) geometry used to Maxwell's equations
+    Permanent magnet synchronous motor geometry used to Maxwell's equations
   </figcaption>
 </figure>
 </div>
 <div>
 
-<i>"The FEniCSx model showed a 57% greater speedup than the Ansys Maxwell model solved
-using the DSO and a 16.5 times larger speedup than the TDM at
-identical core counts".</i><sup>7</sup>
+<i>"The FEniCSx model showed a 57% greater speedup than the Ansys Maxwell model
+solved using the distributed solve option and a 16.5 times larger speedup than
+the time decomposition method, at identical core counts".</i><sup>7</sup>
 
 </div>
 </columns>
+
+---
+
+# Choosing open-source software
+
+- There is no one-size-fits-all option.
+
+---
+
+# Limitations
 
 ---
 
@@ -546,7 +584,7 @@ $$
 <figure style="text-align: center;">
   <img src="first_mesh.png" width="300" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%; padding-top: 10px;">
-    First Finite Element Mesh Used for the Analysis of Gravity Dam<sup>4</sup>
+    First finite element mesh used for the analysis of gravity dam<sup>4</sup>
   </figcaption>
 </figure>
 
@@ -631,6 +669,9 @@ $$
 
 # How does FEniCS fit into this landscape?
 
+- Open source (multiple providers) e.g.:
+  - FreeCAD/OpenCascade → Gmsh → **FEniCS** → Paraview → Custom.
+
 ---
 
 # Brief history of FEniCS
@@ -639,27 +680,34 @@ $$
 
 <div data-marpit-fragment>
 
-- **2002**: First public version of C++ library (DOLFIN)
-- **2003**: FEniCS Project was created
-- **2005**: First Python interface (PyDOLFIN)
-- **2008**: Symbolic language + code generation 'ready'.
+- **2002**: First public version of C++ library. 
+- **2003**: FEniCS Project was created.
+- **2005**: First Python interface to C++ library - easier to use.
+- **2008**: Symbolic language + code generation 'mature'.
 
 </div>
 <div data-marpit-fragment>
 
-- **2009**: Initial MPI support
-- **2017**: Bottom up re-write: pre-exascale HPC (FEniCSx).
+- **2009**: Initial MPI support.
+- **2017**: Bottom up re-write: pre-exascale HPC.
 
 </div>
+
+---
+
+# Brief history of FEniCS
+
+![bg right:25%](./fenics_logo.png)
 
 <br>
 <div data-marpit-fragment>
 
+
 - **Today**:
-  - ~12 000 monthly downloads
-  - ~3800 monthly users of help forum
-  - ~1300 citations of main papers per year
-  - Academia > Startups > SMEs > Multinationals
+  - Used worldwide across academia, SMEs, multinationals.
+  - ~12 000 monthly downloads.
+  - ~3800 monthly users of help forum.
+  - ~1300 citations per year of main papers.
 
 </div>
 
@@ -703,30 +751,27 @@ Garth N. Wells (University of Cambridge)
 
 ## <!--  footer: $^1$ Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
 
-
-
-# FEniCS is used in a variety of SMEs
-
-<div class=skewed-columns>
-
-<div>
-<figure style="text-align: center;">
-  <img src="undabit-simulation.png" width="800" style="max-width: 100%; height: auto;">
-  <figcaption style="font-size: 50%; padding-top: 10px;">
-    Undabit uses FEniCS for acoustic simulation <br>(see: <a href=https://www.https://undabit.com>https://undabit.com</a>)<br>
-    Image courtesy of Antonio Svizzero
-  </figcaption>
-</figure>
 </div>
-<div  style="font-size: 20px">
-<br><br><br>
-<em  style="font-size: 20px">
-"As a former user of commercial software I often felt limited by their 'black box' architecture. FEniCS gives Undabit direct access to manipulate the governing equations and system matrices. This flexibility allows us to build custom tools and solve rigorous engineering challenges for real-world industrial applications that commercial software simply cannot match."
-</em>
-Antonio Svizzero (Founder of UndaBit)
 
-</div>
-</div>
+---
+
+# Key features
+
+- Write mathematics as code.
+- Automatic construction of finite element models.
+- HPC ready.
+
+---
+
+# Live demo (summary)
+
+- Pre-processing (STEP to mesh).
+- Writing a full elasticity solver.
+- Postprocessing solution.
+- Output.
+- Visualisation (Paraview).
+
+---
 
 
 # How does it work?<sup>7</sup>
@@ -741,92 +786,9 @@ Antonio Svizzero (Founder of UndaBit)
 
 ---
 
-<!--  footer: <br> -->
+# Conclusions
 
-# How to set up a problem in FEniCS?
 
-$$\min_{u_h\in V}J_h(u_h) = \int_\Omega C\epsilon(u_h): \epsilon(u_h)~\mathrm{d}x - \int_\Omega f\cdot v~\mathrm{d}x,$$
-
-```python
-import basix.ufl
-import ufl
-cell = "triangle"
-c_el = basix.ufl.element("Lagrange", cell, mesh_degree, shape=(2,))
-domain = ufl.Mesh(c_el)
-```
-
----
-
-# How to set up a problem in FEniCS?
-
-$$\min_{u_h\in V}J_h(u_h) = \int_\Omega C\epsilon(u_h): \epsilon(u_h)~\mathrm{d}x - \int_\Omega f\cdot v~\mathrm{d}x,$$
-
-```python {color=green}
-# ....
-el = basix.ufl.element("Lagrange", cell, space_degree, shape=(2,))
-Vh = ufl.FunctionSpace(domain, el)
-uh = ufl.Coefficient(Vh)
-f = ufl.Coefficient(Vh)
-mu = ufl.Constant(domain)
-lmbda = ufl.Constant(domain)
-
-def sigma(u):
-    return lmbda _ ufl.nabla_div(u) _ ufl.Identity(len(u)) + 2 _ mu _ epsilon(u)
-
-Jh = 0.5 * ufl.inner(sigma(uh), epsilon(uh)) * ufl.dx - ufl.inner(f, uh) * ufl.dx
-```
-
----
-
-# How to set up a problem in FEniCS?
-
-$$\min_{u_h\in V}J_h(u_h) = \int_\Omega C\epsilon(u_h): \epsilon(u_h)~\mathrm{d}x - \int_\Omega f\cdot v~\mathrm{d}x,$$
-
-<br>
-
-<div class=columns>
-<div>
-
-```python
-dv = ufl.TestFunction(Vh)
-F = ufl.derivative(Jh, uh, dv)
-du  = ufl.TrialFunction(Vh)
-Jacobian = ufl.derivative(F, uh, du)
-```
-
-</div>
-<div>
-</div>
-</div>
-
----
-
-<!--  footer:  <br><br> -->
-
-# Does companies use FEnICS at the moment?
-
-- Rafinex (Jack), closed source GUI https://www.youtube.com/watch?v=INtwTI8HFRM
-- Turbostream CFD (Jørgen)
-- Feather https://feather.solutions/ (I've asked feather for a quote)
-
----
-
-- Explain difference between FEniCS terminology and the commercial terminology
-
-- Scalability - Performance tests
-- Control
-
----
-
-<!--  footer: <br> -->
-
-Options for UMAT-like functionality
-
-https://bleyerj.github.io/comet-fenicsx/
-https://github.com/BAMresearch/fenics-constitutive
-
-Potentially interesting thesis to replicate ansys
-https://wrap.warwick.ac.uk/id/eprint/191715/1/WRAP_Theses_Curtis_2024.pdf
 
 ---
 
@@ -1717,3 +1679,95 @@ Implemented together with Umberto Zerbinati.<br>
 
 </div>
 </div>
+
+
+---
+
+<!--  footer: <br> -->
+
+# How to set up a problem in FEniCS?
+
+$$\min_{u_h\in V}J_h(u_h) = \int_\Omega C\epsilon(u_h): \epsilon(u_h)~\mathrm{d}x - \int_\Omega f\cdot v~\mathrm{d}x,$$
+
+```python
+import basix.ufl
+import ufl
+cell = "triangle"
+c_el = basix.ufl.element("Lagrange", cell, mesh_degree, shape=(2,))
+domain = ufl.Mesh(c_el)
+```
+
+---
+
+# How to set up a problem in FEniCS?
+
+$$\min_{u_h\in V}J_h(u_h) = \int_\Omega C\epsilon(u_h): \epsilon(u_h)~\mathrm{d}x - \int_\Omega f\cdot v~\mathrm{d}x,$$
+
+```python {color=green}
+# ....
+el = basix.ufl.element("Lagrange", cell, space_degree, shape=(2,))
+Vh = ufl.FunctionSpace(domain, el)
+uh = ufl.Coefficient(Vh)
+f = ufl.Coefficient(Vh)
+mu = ufl.Constant(domain)
+lmbda = ufl.Constant(domain)
+
+def sigma(u):
+    return lmbda _ ufl.nabla_div(u) _ ufl.Identity(len(u)) + 2 _ mu _ epsilon(u)
+
+Jh = 0.5 * ufl.inner(sigma(uh), epsilon(uh)) * ufl.dx - ufl.inner(f, uh) * ufl.dx
+```
+
+---
+
+# How to set up a problem in FEniCS?
+
+$$\min_{u_h\in V}J_h(u_h) = \int_\Omega C\epsilon(u_h): \epsilon(u_h)~\mathrm{d}x - \int_\Omega f\cdot v~\mathrm{d}x,$$
+
+<br>
+
+<div class=columns>
+<div>
+
+```python
+dv = ufl.TestFunction(Vh)
+F = ufl.derivative(Jh, uh, dv)
+du  = ufl.TrialFunction(Vh)
+Jacobian = ufl.derivative(F, uh, du)
+```
+
+</div>
+<div>
+</div>
+</div>
+
+---
+
+<!--  footer:  <br><br> -->
+
+# Does companies use FEnICS at the moment?
+
+- Rafinex (Jack), closed source GUI https://www.youtube.com/watch?v=INtwTI8HFRM
+- Turbostream CFD (Jørgen)
+- Feather https://feather.solutions/ (I've asked feather for a quote)
+
+---
+
+- Explain difference between FEniCS terminology and the commercial terminology
+
+- Scalability - Performance tests
+- Control
+
+---
+
+<!--  footer: <br> -->
+
+Options for UMAT-like functionality
+
+https://bleyerj.github.io/comet-fenicsx/
+https://github.com/BAMresearch/fenics-constitutive
+
+Potentially interesting thesis to replicate ansys
+https://wrap.warwick.ac.uk/id/eprint/191715/1/WRAP_Theses_Curtis_2024.pdf
+
+---
