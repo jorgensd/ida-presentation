@@ -5,14 +5,11 @@
 # In this example, we will show how to use FEniCS to solve the equations of linear elasticity and hyper-elasticity with FEniCS.
 # We start by importing the required modules.
 
-# +
 from mpi4py import MPI
 from pathlib import Path
 import dolfinx.fem.petsc
 import basix.ufl
 import ufl
-
-# -
 
 # # Loading meshes
 # DOLFINx has a wide range of ways of loading meshes. One of the most common formats is the `.msh` format, which we provide wrappers for
@@ -22,14 +19,18 @@ domain = mesh_data.mesh
 cell_tags = mesh_data.cell_tags
 facet_tags = mesh_data.facet_tags
 
-# We can for instance inspect the geometry with pyvista
+# Note that to be able to run large problems we use **MPI**-communicators to partition the mesh across the available number of processes.
 
+# We can for instance inspect the geometry with pyvista, which uses VTK to visualize unstructured grids.
+
+# +
 import pyvista
 
 grid = pyvista.UnstructuredGrid(*dolfinx.plot.vtk_mesh(domain))
 plotter = pyvista.Plotter(shape=(1, 2))
 plotter.subplot(0, 0)
 plotter.add_mesh(grid, show_edges=True)
+# -
 
 # Additionally we add the facet markers
 
@@ -43,7 +44,9 @@ plotter.add_mesh(markers)
 plotter.link_views()
 plotter.show()
 
-# We can store the mesh to XDMF to visualize it in Paraview
+# We can store the mesh to XDMF to visualize it in Paraview.
+# FEniCS also supports: VTK, BP
+
 output_folder = Path("output")
 output_folder.mkdir(exist_ok=True)
 with dolfinx.io.XDMFFile(domain.comm, output_folder / "mesh.xdmf", "w") as xdmf:
@@ -54,7 +57,7 @@ with dolfinx.io.XDMFFile(domain.comm, output_folder / "mesh.xdmf", "w") as xdmf:
 
 # # Finite elements and function spaces
 
-# Next, we pick a finite element function space to use for the unknown displacement $\mathbf{u}$
+# Next, we pick a finite element function space to use for the unknown displacement $\mathbf{u}$.
 # The grid we have loaded can be arbitrary order Lagrangian (i.e. can have curved edges).
 # We do not need to take this into account when choosing the function space, as FEniCS supports
 #
@@ -96,13 +99,14 @@ mu = E_young / (2.0 * (1.0 + nu))
 lmbda = E_young * nu / ((1.0 + nu) * (1.0 - 2.0 * nu))  # Plane strain definition
 lmbda = 2 * mu * lmbda / (lmbda + 2 * mu)  # Plane stress definition
 
+I = ufl.Identity(len(uh))
 
 def epsilon(u):
     return ufl.sym(ufl.grad(u))
 
 
 def sigma(u, mu, lmbda):
-    return 2.0 * mu * epsilon(u) + lmbda * ufl.tr(epsilon(u)) * ufl.Identity(len(u))
+    return 2.0 * mu * epsilon(u) + lmbda * ufl.tr(epsilon(u)) * I
 
 
 # -
@@ -127,6 +131,11 @@ t = ufl.as_vector((0, 0, -x[0] * x[1]))
 
 J -= ufl.inner(t, uh) * dsN
 # -
+
+# # Symbolic differentiation
+# What we have seen so far is a symbolic representation of our problem. It will be the same (up to the traction, body force and Dirichlet condition) for all
+# problems using linear elasticity. In most FEM software, each of the integration kernels for the individual terms are implemented by hand in a high-performance language, such as C++, C or Fortran. However, in FEniCS we **generate** these kernels at **run-time** (JIT) with the FEniCS Form Compiler (FFCx) as C code.
+# Since DOLFINx also has a C++ backend, we can also generate these kernels **ahead of time** (AOT compilation), and use them directly in C++.
 
 # We compute the variation $F=\frac{\partial J}{\partial u}[\delta v]=0 \quad \forall v \in V$
 
@@ -198,7 +207,11 @@ s = sigma(uh, mu, lmbda) - 1.0 / 3 * ufl.tr(sigma(uh, mu, lmbda)) * ufl.Identity
 )
 von_Mises = ufl.sqrt(3.0 / 2 * ufl.inner(s, s))
 
-# Put stresses and displacement in same space
+# We have now created a **symbolic expression** describing the von Mises stresses.
+# To visualize it, we interpolate this expression into a suitable function space,
+# such as a DG space or a quadrature space.
+# Additionally we interpolate the displacement into the same space to be able to
+# visualize the stress on the deformed grid.
 
 V_DG = dolfinx.fem.functionspace(
     domain, ("DG", degree_displacement, (domain.geometry.dim,))
@@ -206,16 +219,22 @@ V_DG = dolfinx.fem.functionspace(
 u_DG = dolfinx.fem.Function(V_DG)
 u_DG.interpolate(uh)
 
+# By calling `dolfinx.fem.Expression`, we generate C code to evaluate the symbolic expression
+# we made above at the interpolation points of the output space.
+# This compiled expression can then be interpolated into the space.
+
 V_von_mises = V_DG.sub(0).collapse()[0]
 stress_expr = dolfinx.fem.Expression(
-    von_Mises, V_von_mises.element.interpolation_points
-)
+    von_Mises, V_von_mises.element.interpolation_points)
 stresses = dolfinx.fem.Function(V_von_mises, name="VonMises")
 stresses.interpolate(stress_expr)
+
+# We can also store the displacement and stresses and visualize them in Paraview
 
 with dolfinx.io.VTXWriter(domain.comm, output_folder / "stresses.bp", [u_DG, stresses]) as bp:
     bp.write(0.0)
 
+# The following snippet shows how to visualize it with Pyvista
 
 stress_grid = pyvista.UnstructuredGrid(*dolfinx.plot.vtk_mesh(V_DG))
 stress_grid.point_data[uh.name] = u_DG.x.array.reshape(-1, 3)
@@ -247,12 +266,11 @@ stress_plotter.show()
 
 # + 
 
-I = ufl.Identity(len(uh))
 F = I + ufl.grad(uh)
 C = F.T * F
 E = 0.5 * (C - I)
 
-W = lmbda / 2 * (ufl.tr(E) ** 2 + mu * ufl.tr(E * E))
+W = lmbda / 2 * ufl.tr(E) ** 2 + mu * ufl.tr(E * E)
 J_svk = W * ufl.dx - ufl.inner(f, uh) * ufl.dx - ufl.inner(t, uh) * dsN
 F_svk = ufl.derivative(J_svk, uh, dv)
 
