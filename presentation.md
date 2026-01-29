@@ -461,7 +461,6 @@ IDA Webinar 29/01/2026<br>
 
 ---
 
-<<<<<<< Updated upstream
 # Reproducibility and transparency
 
 - Inspect algorithms, verify assumptions, audit numerics.
