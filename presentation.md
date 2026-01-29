@@ -529,22 +529,26 @@ the time decomposition method, at identical core counts".</i><sup>7</sup>
 
 # Limitations
 
+<!-- footer: <br/><br/> --> 
+
 - Verification/validation burden moves onto you.
 - Knowledge concentration into a few maintainers.
-- License compatibility.
+- Fragmentation.
+- License compatibility (GPL).
 - Support and liability.
 
 ---
 
 # Checklist
 
-- Does the software support the physics I need?
+- Does the software support the features I need?
 - Is the software verified? Unit tests, examples, published studies. 
 - How big/active is the development team?
 - Is the project in good health? Commits, releases.
 - Does the code interoperate with existing workflows?
+   - Hybrid open-source/proprietary.
 - Does the open-source licensing fit my intended use?
-- Is there paid support? Consultancy, Integration. 
+- Is there paid support? Consultancy. 
 
 ---
 
