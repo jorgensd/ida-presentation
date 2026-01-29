@@ -7,7 +7,7 @@
 
 # +
 from mpi4py import MPI
-
+from pathlib import Path
 import dolfinx.fem.petsc
 import basix.ufl
 import ufl
@@ -44,8 +44,9 @@ plotter.link_views()
 plotter.show()
 
 # We can store the mesh to XDMF to visualize it in Paraview
-
-with dolfinx.io.XDMFFile(domain.comm, "mesh.xdmf", "w") as xdmf:
+output_folder = Path("output")
+output_folder.mkdir(exist_ok=True)
+with dolfinx.io.XDMFFile(domain.comm, output_folder / "mesh.xdmf", "w") as xdmf:
     xdmf.write_mesh(domain)
     xdmf.write_meshtags(facet_tags, domain.geometry)
 
@@ -168,7 +169,7 @@ problem.solve()
 
 # We store the solution to a `.bp` file (ADIOS2 binary pack format)
 
-with dolfinx.io.VTXWriter(domain.comm, "u.bp", [uh]) as bp:
+with dolfinx.io.VTXWriter(domain.comm, output_folder / "u.bp", [uh]) as bp:
     bp.write(0.0)
 
 # and visualize it with pyvista
@@ -212,7 +213,7 @@ stress_expr = dolfinx.fem.Expression(
 stresses = dolfinx.fem.Function(V_von_mises, name="VonMises")
 stresses.interpolate(stress_expr)
 
-with dolfinx.io.VTXWriter(domain.comm, "stresses.bp", [u_DG, stresses]) as bp:
+with dolfinx.io.VTXWriter(domain.comm, output_folder / "stresses.bp", [u_DG, stresses]) as bp:
     bp.write(0.0)
 
 
@@ -278,7 +279,7 @@ result_plotter.add_mesh(warped_solution)
 result_plotter.link_views()
 result_plotter.show()
 
-with dolfinx.io.VTXWriter(domain.comm, "u.bp", [uh]) as bp:
+with dolfinx.io.VTXWriter(domain.comm, output_folder / "u.bp", [uh]) as bp:
     bp.write(0.0)
 
 # -
