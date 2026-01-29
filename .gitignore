@@ -331,3 +331,4 @@ node_modules
 *.bp/
 *.msh
 *-checkpoint.ipynb
+.ipynb_checkpoints
