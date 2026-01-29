@@ -527,13 +527,24 @@ the time decomposition method, at identical core counts".</i><sup>7</sup>
 
 ---
 
-# Choosing open-source software
+# Limitations
 
-- There is no one-size-fits-all option.
+- Verification/validation burden moves onto you.
+- Knowledge concentration into a few maintainers.
+- License compatibility.
+- Support and liability.
 
 ---
 
-# Limitations
+# Checklist
+
+- Does the software support the physics I need?
+- Is the software verified? Unit tests, examples, published studies. 
+- How big/active is the development team?
+- Is the project in good health? Commits, releases.
+- Does the code interoperate with existing workflows?
+- Does the open-source licensing fit my intended use?
+- Is there paid support? Consultancy, Integration. 
 
 ---
 
@@ -579,7 +590,7 @@ $$
 
 **1950s**: The birth of FEM <sup>3</sup> at Boeing
 
-**1963**: Symbolic Matrix Interpretive System (FORTRAN, open-access)
+**1963**: Symbolic Matrix Interpretive System (FORTRAN, freeware)
 
 <figure style="text-align: center;">
   <img src="first_mesh.png" width="300" style="max-width: 100%; height: auto;">
@@ -749,7 +760,7 @@ Garth N. Wells (University of Cambridge)
 <br><img src="fenics_logo.png" width=150px>
 </center>
 
-## <!--  footer: $^1$ Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
+<!--  footer: $^1$ Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
 
 </div>
 
@@ -761,14 +772,16 @@ Garth N. Wells (University of Cambridge)
 - Automatic construction of finite element models.
 - HPC ready.
 
+<!--  footer: $^1$ Baratta, Dean, <b>Dokken</b>, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
+
 ---
 
 # Live demo (summary)
 
-- Pre-processing (STEP to mesh).
-- Writing a full elasticity solver.
-- Postprocessing solution.
-- Output.
+- Pre-processing (STEP to mesh, via gmsh).
+- Writing a complete elasticity solver in Python (FEniCS).
+- Postprocessing (FEniCS).
+- Output (FEniCS to open format VTK).
 - Visualisation (Paraview).
 
 ---
@@ -786,15 +799,42 @@ Garth N. Wells (University of Cambridge)
 
 ---
 
+# Code generation 
+
+```c
+
+void tabulate_tensor_integral_a80de02e2fc39315d8672b75da91b1586209cb47(double* restrict A,
+                                    const double* restrict w,
+                                    const double* restrict c,
+                                    const double* restrict coordinate_dofs,
+                                    const int* restrict entity_local_index,
+                                    const uint8_t* restrict quadrature_permutation)
+{
+// Quadrature rules
+static const double weights_39d[6] = {0.054975871827661, 0.054975871827661, 0.054975871827661, 0.1116907948390055, 0.1116907948390055, 0.1116907948390055};
+// Precomputed values of basis functions and precomputations
+// FE* dimensions: [permutation][entities][points][dofs]
+static const double FE1_C0_D10_Q39d[1][1][1][3] = {{{{-1.0, 1.0, 0.0}}}};
+static const double FE1_C1_D01_Q39d[1][1][1][3] = {{{{-1.0, 0.0, 1.0}}}};
+static const double FE2_C0_Q39d[1][1][6][6] = {{{{-0.07480380774819603, 0.5176323419876736, -0.07480380774819671, 0.2992152309927871, 0.03354481152314834, 0.2992152309927839},
+  {-0.07480380774819613, -0.0748038077481966, 0.5176323419876735, 0.2992152309927871, 0.2992152309927838, 0.03354481152314828},
+  {0.5176323419876713, -0.0748038077481967, -0.07480380774819674, 0.03354481152314866, 0.2992152309927869, 0.2992152309927868},
+  {-0.04820837781551195, -0.08473049309397784, -0.04820837781551192, 0.1928335112620479, 0.7954802262009061, 0.1928335112620478},
+  {-0.04820837781551193, -0.048208377815512, -0.08473049309397786, 0.1928335112620479, 0.192833511262048, 0.7954802262009062},
+  {-0.08473049309397794, -0.04820837781551188, -0.04820837781551195, 0.7954802262009061, 0.1928335112620479, 0.1928335112620479}}}};
+// ------------------------
+}
+```
+
+---
+
 # Conclusions
 
 
 
 ---
 
----
-
-# backup slides for now
+# Backup slides
 
 ---
 
