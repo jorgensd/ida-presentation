@@ -232,7 +232,7 @@ IDA Webinar 29/01/2026<br>
 - What are the constraints and limitations?
 - A (brief) history of finite element methods.
 - A demo of the FEniCS Project.
-- Conclusions:www.
+- Conclusions.
 
 ---
 
@@ -240,7 +240,7 @@ IDA Webinar 29/01/2026<br>
 
 - <b>Simulation</b> has become a key enabling tool in Engineering and Science.
 - Demands from industry and academia are forcing change:
-  - Diversity, complexity, uncertainty.
+  - Diversity and complexity.
   - Reproducibility, transparency, auditability.
   - Novel computing hardware - "AI".
   - Budget constraints.
@@ -499,8 +499,14 @@ Antonio Svizzero (Founder of UndaBit)
 
 ---
 
-
-
+<div>
+<figure style="text-align: center;">
+  <img src="festim_vvv.png" width="400" style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+  FESTIM Verification & Validation notebook. https://festim-vv-report.readthedocs.io/en/latest/validation
+  </figcaption>
+</figure>
+</div>
 
 ---
 
