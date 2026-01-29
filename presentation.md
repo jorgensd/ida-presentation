@@ -499,11 +499,17 @@ Antonio Svizzero (Founder of UndaBit)
 
 ---
 
+<div class="right-skewed-columns">
 <div>
 <figure style="text-align: center;">
-  <img src="festim_vvv.png" width="400" style="max-width: 100%; height: auto;">
+  <img src="festim_description.png" width="250" style="max-width: 100%; height: auto;">
+</figure>
+</div>
+<div>
+<figure style="text-align: center;">
+  <img src="festim_vvv.png" width="430" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%; padding-top: 10px;">
-  FESTIM Verification & Validation notebook. <a href="https://festim-vv-report.readthedocs.io/en/latest/validation">https://festim-vv-report.readthedocs.io/en/latest/validation</a>
+  FESTIM Verification & Validation notebook. <br><a href="https://festim-vv-report.readthedocs.io/en/latest/validation">https://festim-vv-report.readthedocs.io/en/latest/validation</a>
   </figcaption>
 </figure>
 </div>
@@ -604,7 +610,7 @@ the time decomposition method, at identical core counts".</i><sup style="font-si
 
 ---
 
-# Finite elements and FEniCS 
+# Finite elements and FEniCS
 
 ---
 
@@ -952,13 +958,14 @@ for (int iq = 0; iq < 6; ++iq)
 - The overall market for simulation is still growing.
 - Increasing demands: complexity, transparency, hardware, budgets.
 - Open-source simulation software has improved enormously:
-   - Ease-of-use.
-   - Integration.
+  - Ease-of-use.
+  - Integration.
 - And is world-leading in terms of performance and flexibility.
 - Provides unique opportunities (and some drawbacks).
 - Proprietary/open-source and fully open-source simulation workflows
 
 ---
+
 <center>
 <div style="font-size:30px">
 <br>
