@@ -422,6 +422,8 @@ IDA Webinar 29/01/2026<br>
 
 ---
 
+# Firon ApS
+
 <figure style="text-align: center;">
   <img src="firon.png" width="1000" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%; padding-top: 10px;">
@@ -430,6 +432,8 @@ IDA Webinar 29/01/2026<br>
 </figure>
 
 ---
+
+# Proxima Fusion
 
 <figure style="text-align: center;">
   <img src="Stellaris-Still_001_White_10k.png" width="800" style="max-width: 100%; height: auto;">
@@ -911,6 +915,16 @@ for (int iq = 0; iq < 6; ++iq)
 ---
 
 # Conclusions
+
+<center>
+<div style="font-size:30px">
+<br>
+If you want to get in touch<br>
+<a href="mailto:dokken@simula.no">dokken@simula.no</a><br>
+<a href="mailto:mail@jackhale.co.uk">mail@jackhale.co.uk</a><br>
+<a href="https://fenicsproject.discourse.group/">https://fenicsproject.discourse.group/</a><br>
+</div>
+<center/>
 
 ---
 
