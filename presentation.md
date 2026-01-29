@@ -616,14 +616,13 @@ the time decomposition method, at identical core counts".</i><sup style="font-si
 Find $u\in V_0$ such that
 
 $$
-R(x) = - \nabla \cdot (\nabla u) - f = 0  \text{ in } \Omega \\
+R(x) = - \nabla \cdot (\nabla u) - f = 0  \text{ in } \Omega. \\
 $$
 
-Define $u_h = \sum_{i=1}^{N} u_i \phi_i(x)$ and an inner product
-$\langle \cdot , \cdot \rangle: V_0 \times V_0 \rightarrow \mathbb{R}$ such that
+Define $u_h = \sum_{i=1}^{N} u_i \phi_i(x)$ and an inner product $\langle \cdot , \cdot \rangle: V_0 \times V_0 \rightarrow \mathbb{R}$ such that
 
 $$
-\langle R(x), \phi_i \rangle = 0 \qquad\forall i=1,\cdots,N
+\langle R(x), \phi_i \rangle = 0 \qquad\forall i=1,\cdots,N.
 $$
 
 <!--  footer:  <sup>8</sup>Liu, W.K., Li, S. & Park, H.S. Eighty Years of the Finite Element Method: Birth, Evolution, and Future. Arch Computat Methods Eng 29, 4431–4453 (2022). DOI: <a href=https://doi.org/10.1007/s11831-022-09740-9>10.1007/s11831-022-09740-9</a> -->
