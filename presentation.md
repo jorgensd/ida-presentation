@@ -503,7 +503,7 @@ Antonio Svizzero (Founder of UndaBit)
 <figure style="text-align: center;">
   <img src="festim_vvv.png" width="400" style="max-width: 100%; height: auto;">
   <figcaption style="font-size: 50%; padding-top: 10px;">
-  FESTIM Verification & Validation notebook. https://festim-vv-report.readthedocs.io/en/latest/validation
+  FESTIM Verification & Validation notebook. <a href="https://festim-vv-report.readthedocs.io/en/latest/validation">https://festim-vv-report.readthedocs.io/en/latest/validation</a>
   </figcaption>
 </figure>
 </div>
