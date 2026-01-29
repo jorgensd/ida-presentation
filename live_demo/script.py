@@ -78,7 +78,7 @@ V = dolfinx.fem.functionspace(domain, el)
 #
 # $$ \min_\mathbf{u\in V_g} J(\mathbf{u}) = \frac{1}{2} \int_\Omega \sigma(\mathbf{u}): \epsilon (\mathbf{u})~\mathrm{d}x - \int_\Omega \mathbf{f}\cdot \mathbf{u}~\mathrm{d}x - \int_{\partial\Omega_N}\mathbf{t}\cdot u~\mathrm{d}s$$
 #
-# where $\sigma(\mathbf{u})=2\mu \epsilon(\mathbf{u})$ is the stress, $\epsilon(\mathbf{u})= \frac{1}{2}(\nabla \mathbf{u}+(\nabla \mathbf{u})^T)$ is the infinitesimal strain.
+# where $\sigma(\mathbf{u})=2\mu \epsilon(\mathbf{u}) + \lambda  \mathrm{tr}(\epsilon(\mathbf{u}))\mathbf{I}$ is the stress, $\epsilon(\mathbf{u})= \frac{1}{2}(\nabla \mathbf{u}+(\nabla \mathbf{u})^T)$ is the infinitesimal strain.
 # $\mathbf{g}$ describes the surface displacement at $\partial\Omega_D$.
 #
 
@@ -128,7 +128,7 @@ t = ufl.as_vector((0, 0, -x[0] * x[1]))
 J -= ufl.inner(t, uh) * dsN
 # -
 
-# We compute the variation $F=\frac{\partial J}{\partial u}[dv]=0 \quad \forall v \in V$
+# We compute the variation $F=\frac{\partial J}{\partial u}[\delta v]=0 \quad \forall v \in V$
 
 dv = ufl.TestFunction(V)
 F = ufl.derivative(J, uh, dv)

@@ -498,8 +498,27 @@ Antonio Svizzero (Founder of UndaBit)
 
 # Solver performance potential
 
+<div class=right-skewed-columns>
+<div>
+<br>
+
 - Performance of open-source simulation software is <b>world class</b>.
 - Scalability, performance and energy-use.
+
+</div>
+
+<div>
+<figure style="text-align: center;">
+  <img src="./backup-figures/weak_scaling_dean.png" width=650>
+  <figcaption style="font-size: 50%; padding-top: 10px;">
+  Figure from the PhD thesis of J.P. Dean<sup>19</sup>
+  </figcaption>
+</figure>
+
+</div>
+</div>
+
+<!-- footer: <sup>19</sup> Dean, J.P, _Mathematical and computational aspects of solving mixed-domain problems using the finite element method_, PhD Thesis, DOI: <a href=https://doi.org/10.17863/CAM.108292>10.17863/CAM.108292</a><br>  -->
 
 ---
 
@@ -752,7 +771,7 @@ Garth N. Wells (University of Cambridge)
 
 ---
 
-# FEniCS 2019-
+# FEniCS 2017-
 
 <center>
 <img src="dolfinx_paper.png" width=960>
@@ -923,12 +942,13 @@ V = ufl.FunctionSpace(domain, el)
 
 ---
 
-<center>
-<img src="backup-figures/supported_elements.png" width=960>
-<br>Table from <sup>14</sup></a>
-<center/>
+# FEniCS supports a wide range of elements<sup>14</sup>
 
-<!--  footer: <sup>14</sup> Baratta, Dean, Dokken, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666 <br><br> -->
+<figure style="text-align: center;">
+<img src="backup-figures/supported_elements.png" width=900>
+</figure>
+
+<!--  footer: <br><sup>14</sup> Baratta, Dean, Dokken, Habera, Hale, Richardson, Rognes, Scroggs, Sime, Wells. 2023. DOLFINx: _The next generation FEniCS problem solving environment_. Zenodo. DOI: 10.5281/zenodo.10447666  -->
 
 ---
 
