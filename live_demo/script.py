@@ -235,8 +235,8 @@ stress_plotter.show()
 #
 # $$
 # \begin{align*}
-# W(u) = W(\mathbf{E}(u)) &= \frac{\lambda}{2}\left[\mathrm{tr}(\mathbf{E})\right]^2 + \mu \mathrm{tr}(\mathbf{E}^2)$$
-# \mathbf{E}(\mathf{u}) &= 0.5 * (\mathbf{C} - \mathbf{I})\\
+# W(u) = W(\mathbf{E}(u)) &= \frac{\lambda}{2}\left[\mathrm{tr}(\mathbf{E})\right]^2 + \mu \mathrm{tr}(\mathbf{E}^2)\\
+# \mathbf{E}(\mathbf{u}) &= 0.5 * (\mathbf{C} - \mathbf{I})\\
 # \mathbf{C} &= \mathbf{F}^T \mathbf{F}\\
 # \mathbf{F} &= \mathbf{I} + \nabla \mathbf{u}
 # \end{align*}
@@ -282,3 +282,19 @@ with dolfinx.io.VTXWriter(domain.comm, "u.bp", [uh]) as bp:
     bp.write(0.0)
 
 # -
+
+# More complex models can also be implemented, such as Mooney-Rivlin
+# Assumptions: (Cauchy stress in terms of strain invariants and deformation tensors)
+#
+# ```python
+# uh = dolfinx.fem.Function(V)
+# I = ufl.Identity(len(uh))
+# F = I + ufl.grad(uh)
+# B = F * F.T # Left Cauchy Green
+# J = ufl.det(F)
+# I1 = ufl.tr(B) # lmbda_i**2
+# I2 = 1/2 * (ufl.tr(B)**2 - ufl.tr(B*B)) 
+# I1b = (J **(-2/3)) * I1
+# I2b = (J **(-4/3)) * I2
+# W = C1 * (I1b - 3) + C2 * (I2b - 3)
+# ```
